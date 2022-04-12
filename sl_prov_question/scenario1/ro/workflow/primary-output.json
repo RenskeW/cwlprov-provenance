@@ -1,0 +1,13 @@
+{
+    "out_file": {
+        "location": "../data/02/02268f97f7a59a9e6bf1a588573b46b49fba17b9",
+        "basename": "scenario1_output.txt",
+        "nameroot": "scenario1_output",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02268f97f7a59a9e6bf1a588573b46b49fba17b9",
+        "size": 367,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:560cadd3-8759-4852-b7fe-1d1c418e8383"
+    }
+}

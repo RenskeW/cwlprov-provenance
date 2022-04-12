@@ -1,0 +1,8 @@
+file_required:
+  class: File
+  location: ./wf_file_req.txt
+file_default:
+  class: File
+  location: ./wf_file_def.txt
+string_required: "wf_string_required"
+string_default: "wf_string_default"

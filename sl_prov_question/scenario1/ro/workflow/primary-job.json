@@ -1,0 +1,22 @@
+{
+    "wf_file_required": {
+        "class": "File",
+        "location": "../data/03/03fabfc98b71bf5340a6a5b756bdcf11732fe1b9",
+        "size": 72,
+        "basename": "wf_file_req.txt",
+        "nameroot": "wf_file_req",
+        "nameext": ".txt",
+        "checksum": "sha1$03fabfc98b71bf5340a6a5b756bdcf11732fe1b9"
+    },
+    "wf_string_required": "wf_input_required_string",
+    "wf_file_default": {
+        "class": "File",
+        "location": "../data/be/beab0cdf9eeb72d6c5801f643c7913e0b7496822",
+        "size": 57,
+        "basename": "wf_file_def.txt",
+        "nameroot": "wf_file_def",
+        "nameext": ".txt",
+        "checksum": "sha1$beab0cdf9eeb72d6c5801f643c7913e0b7496822"
+    },
+    "wf_string_default": "wf_input_default_string"
+}

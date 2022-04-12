@@ -1,0 +1,1 @@
+CWL CommandLineTool output: /private/tmp/docker_tmpm0aig179/stgd453918b-93b6-4357-82e9-8d46db8b3498/wf_file_req.txt /private/tmp/docker_tmpm0aig179/stg8ffd5068-abc5-4631-8b6f-4b048970aef8/wf_file_def.txt wf_input_required_string wf_input_default_string /private/tmp/docker_tmpm0aig179/stg8d3d7c7f-d724-4da1-a08a-71756458403c/clt_def_file.txt clt_level_default_string

@@ -1,0 +1,4 @@
+wf_file_required:
+  class: File
+  location: ./wf_file_req.txt
+wf_string_required: "wf_input_required_string"
