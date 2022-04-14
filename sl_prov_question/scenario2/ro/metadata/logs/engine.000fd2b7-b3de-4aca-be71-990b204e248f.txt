@@ -1,0 +1,26 @@
+[2022-04-13T19:36:46,96.073866Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro wf.cwl
+[2022-04-13T19:36:46,104.331017Z] Resolved 'wf.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario2/wf.cwl'
+[2022-04-13T19:36:53,790.050030Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario2/input_all_file.txt
+[2022-04-13T19:36:53,807.529926Z] [workflow ] start
+[2022-04-13T19:36:53,808.089018Z] [workflow ] starting step step1
+[2022-04-13T19:36:53,808.432102Z] [step step1] start
+[2022-04-13T19:36:53,819.905996Z] [job step1] /private/tmp/docker_tmp28unoq15$ echo \
+    'Step 1 output:' \
+    step1_string_input \
+    both_steps_string_input \
+    /private/tmp/docker_tmpnx3_3vpn/stg58f2f693-f958-486c-9e6f-79c7f6e604f1/input1_file.txt \
+    /private/tmp/docker_tmpnx3_3vpn/stgce58ca8c-3b5e-42c8-9519-e3b21f857d5c/input_all_file.txt > /private/tmp/docker_tmp28unoq15/output_step1.txt
+[2022-04-13T19:36:53,869.459867Z] [job step1] completed success
+[2022-04-13T19:36:53,870.289803Z] [step step1] completed success
+[2022-04-13T19:36:53,871.912003Z] [workflow ] starting step step2
+[2022-04-13T19:36:53,872.312069Z] [step step2] start
+[2022-04-13T19:36:53,882.452011Z] [job step2] /private/tmp/docker_tmpnve0u7w2$ echo \
+    'Step 2 output:' \
+    step2_string_input \
+    both_steps_string_input \
+    /private/tmp/docker_tmp8jupeckm/stg2aacc1bc-9712-485c-ae77-b531eeafcc91/input2_file.txt \
+    /private/tmp/docker_tmp8jupeckm/stgd964f6f6-7617-4072-bf12-c0e02c16b65e/input_all_file.txt > /private/tmp/docker_tmpnve0u7w2/output_step2.txt
+[2022-04-13T19:36:54,57.996988Z] [job step2] completed success
+[2022-04-13T19:36:54,59.602976Z] [step step2] completed success
+[2022-04-13T19:36:54,61.882019Z] [workflow ] completed success
+[2022-04-13T19:36:54,309.017181Z] Final process status is success

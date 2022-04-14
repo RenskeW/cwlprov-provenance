@@ -1,1 +1,2 @@
+clt_def_file.txt 
 This is a file with default option in the command line tool description.

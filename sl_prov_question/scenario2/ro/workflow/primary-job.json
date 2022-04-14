@@ -1,0 +1,12 @@
+{
+    "both_input_file": {
+        "class": "File",
+        "location": "../data/ce/cecc6d31ccf7d17890848466a82a790a20e5fbff",
+        "size": 68,
+        "basename": "input_all_file.txt",
+        "nameroot": "input_all_file",
+        "nameext": ".txt",
+        "checksum": "sha1$cecc6d31ccf7d17890848466a82a790a20e5fbff"
+    },
+    "both_input_string": "both_steps_string_input"
+}

@@ -1,0 +1,2 @@
+./input2_file.txt
+Input of type file for step 2

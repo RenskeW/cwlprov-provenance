@@ -1,0 +1,1 @@
+Step 2 output: step2_string_input both_steps_string_input /private/tmp/docker_tmp8jupeckm/stg2aacc1bc-9712-485c-ae77-b531eeafcc91/input2_file.txt /private/tmp/docker_tmp8jupeckm/stgd964f6f6-7617-4072-bf12-c0e02c16b65e/input_all_file.txt

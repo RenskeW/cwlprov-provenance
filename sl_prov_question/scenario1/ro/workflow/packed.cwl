@@ -18,7 +18,7 @@
                     "type": "File",
                     "default": {
                         "class": "File",
-                        "location": "file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWL%20project/cwlprov-provenance/sl_prov_question/scenario1/clt_def_file.txt"
+                        "location": "file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario1/clt_def_file.txt"
                     },
                     "id": "#clt_example.cwl/clt_default_file"
                 },
@@ -72,7 +72,7 @@
                     "type": "File",
                     "default": {
                         "class": "File",
-                        "location": "file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWL%20project/cwlprov-provenance/sl_prov_question/scenario1/wf_file_def.txt"
+                        "location": "file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario1/wf_file_def.txt"
                     },
                     "id": "#main/wf_file_default"
                 },

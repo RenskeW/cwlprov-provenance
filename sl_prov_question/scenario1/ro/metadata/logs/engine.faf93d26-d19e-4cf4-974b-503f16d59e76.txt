@@ -1,0 +1,19 @@
+[2022-04-14T07:41:36,221.478939Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro wf_example.cwl job_wf_example.yml
+[2022-04-14T07:41:36,231.842995Z] Resolved 'wf_example.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario1/wf_example.cwl'
+[2022-04-14T07:41:44,745.503902Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario1/wf_file_req.txt
+[2022-04-14T07:41:44,758.260012Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario1/wf_file_def.txt
+[2022-04-14T07:41:44,790.684938Z] [workflow ] start
+[2022-04-14T07:41:44,791.417122Z] [workflow ] starting step wf_print_output
+[2022-04-14T07:41:44,791.795015Z] [step wf_print_output] start
+[2022-04-14T07:41:44,806.877851Z] [job wf_print_output] /private/tmp/docker_tmplviogzui$ echo \
+    'CWL CommandLineTool output:' \
+    /private/tmp/docker_tmp0sdmb_7m/stg46b37ef7-a3cd-4727-b114-b4e90de7b34b/wf_file_req.txt \
+    /private/tmp/docker_tmp0sdmb_7m/stg2b5b6101-6650-41c3-8464-03016867c415/wf_file_def.txt \
+    wf_input_required_string \
+    wf_input_default_string \
+    /private/tmp/docker_tmp0sdmb_7m/stg9bc22e4f-af0c-4eb8-b94e-fb00b6887cec/clt_def_file.txt \
+    clt_level_default_string > /private/tmp/docker_tmplviogzui/scenario1_output.txt
+[2022-04-14T07:41:44,978.178978Z] [job wf_print_output] completed success
+[2022-04-14T07:41:44,982.469797Z] [step wf_print_output] completed success
+[2022-04-14T07:41:44,985.369205Z] [workflow ] completed success
+[2022-04-14T07:41:45,465.042830Z] Final process status is success

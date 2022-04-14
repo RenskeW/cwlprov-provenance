@@ -1,0 +1,1 @@
+Step 1 output: step1_string_input both_steps_string_input /private/tmp/docker_tmpnx3_3vpn/stg58f2f693-f958-486c-9e6f-79c7f6e604f1/input1_file.txt /private/tmp/docker_tmpnx3_3vpn/stgce58ca8c-3b5e-42c8-9519-e3b21f857d5c/input_all_file.txt
