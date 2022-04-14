@@ -77,7 +77,7 @@ Observations from `primary*.ttl`:
 - primary `.ttl` only lists the 2 inputs specified at **main wf level** (not those with defaults at main wf step level!)
 
 Observations from `workflow_20step*.ttl`:
-- Provenance of nested wf steps list all 4 inputs per step.
+- Provenance of nested wf steps lists all 4 inputs per step.
 
 # scenario 4
 Multistep workflow where the output of step 1 is the input for step 2?
