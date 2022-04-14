@@ -1,0 +1,30 @@
+[2022-04-14T08:45:30,309.293985Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro wf3.cwl
+[2022-04-14T08:45:30,442.160845Z] Resolved 'wf3.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sl_prov_question/scenario3/wf3.cwl'
+[2022-04-14T08:45:41,603.956938Z] [workflow ] start
+[2022-04-14T08:45:41,604.431868Z] [workflow ] starting step step
+[2022-04-14T08:45:41,604.817867Z] [step step] start
+[2022-04-14T08:45:41,606.425047Z] [workflow step] start
+[2022-04-14T08:45:41,606.897831Z] [workflow step] starting step step2
+[2022-04-14T08:45:41,607.263088Z] [step step2] start
+[2022-04-14T08:45:41,612.941980Z] [job step2] /private/tmp/docker_tmp14g1inbv$ echo \
+    'Nested step 2 output:' \
+    st2_main \
+    st2_main_step \
+    st2_nested_step \
+    st2_clt > /private/tmp/docker_tmp14g1inbv/nested2_output.txt
+[2022-04-14T08:45:41,638.963938Z] [job step2] completed success
+[2022-04-14T08:45:41,641.134024Z] [step step2] completed success
+[2022-04-14T08:45:41,644.664049Z] [workflow step] starting step step1
+[2022-04-14T08:45:41,647.601843Z] [step step1] start
+[2022-04-14T08:45:41,654.612064Z] [job step1] /private/tmp/docker_tmpyv1qd_gn$ echo \
+    'Nested step 1 output:' \
+    st1_main \
+    st1_main_step \
+    st1_nested_step \
+    st1_clt > /private/tmp/docker_tmpyv1qd_gn/nested1_output.txt
+[2022-04-14T08:45:41,683.440924Z] [job step1] completed success
+[2022-04-14T08:45:41,684.069157Z] [step step1] completed success
+[2022-04-14T08:45:41,841.068029Z] [workflow step] completed success
+[2022-04-14T08:45:41,841.457844Z] [step step] completed success
+[2022-04-14T08:45:41,841.872931Z] [workflow ] completed success
+[2022-04-14T08:45:41,910.389900Z] Final process status is success

@@ -10,6 +10,7 @@ Why: to answer a provenance question
 4. required string, default specified at workflow inputs level: `"wf_input_default_string"`
 
 In addition, there are 2 more inputs with defaults specified at CLT level:
+
 5. file: `./scenario1/clt_def_file.txt`
 6. string: `"clt_level_default_string"` 
 
@@ -46,7 +47,37 @@ Observations about `primary.cwlprov*.ttl`:
 - output files are listed at the top of the file
 
 # scenario 3
-Multi-step workflow where one of the steps is a nested workflow?
+1-step workflow where the step is a nested workflow (2 steps). Takes 8 inputs and produces 2 outputs.
+
+Inputs:
+
+1. string input for nested step 1, default at main wf level: `"st1_main"`
+2. string input for nested step 2, default at main wf level: `"st2_main"`
+3. string input for nested step 1, default at main wf step level: `"st1_main_step"`
+4. string input for nested step 2, default at main wf step level: `"st2_main_step"`
+5. string input for nested step 1, default at nested wf step level: `"st1_nested_step"`
+6. string input for nested step 2, default at nested wf step level: `"st2_nested_step"`
+7. string input for nested step 1, default at CLT level: `"st1_clt"`
+8. string input for nested step 2, default at CLT level: `"st2_clt"`
+
+Outputs:
+
+1. `nested1_output.txt` (produced by nested step 1)
+2. `nested2_output.txt` (produced by nested step 2)
+
+Visualization:
+
+- graph of nested wf: `nested_graph*.svg`
+- graph of main wf: `main_graph*.svg`
+
+From `scenario3/`, run `cwltool --provenance ro wf3.cwl`
+
+Observations from `primary*.ttl`:
+- All provenance about the nested workflow step is in a separate file: `workflow_20step.a20bd18f-73fc-48f2-99e8-384957c74c93.cwlprov.ttl`
+- primary `.ttl` only lists the 2 inputs specified at **main wf level** (not those with defaults at main wf step level!)
+
+Observations from `workflow_20step*.ttl`:
+- Provenance of nested wf steps list all 4 inputs per step.
 
 # scenario 4
 Multistep workflow where the output of step 1 is the input for step 2?

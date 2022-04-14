@@ -1,0 +1,24 @@
+{
+    "outfile1": {
+        "location": "../data/3b/3b27759c10370c9ffe3018c716723b63a372c593",
+        "basename": "nested1_output.txt",
+        "nameroot": "nested1_output",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$3b27759c10370c9ffe3018c716723b63a372c593",
+        "size": 69,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:a473b44f-0546-4802-aeda-48fd43a05fe5"
+    },
+    "outfile2": {
+        "location": "../data/e6/e6ad9d02e1d86909b347e3b0ab5ab251bf3713b8",
+        "basename": "nested2_output.txt",
+        "nameroot": "nested2_output",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$e6ad9d02e1d86909b347e3b0ab5ab251bf3713b8",
+        "size": 69,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:50d2e16f-176b-4d58-aaac-8a4f86a741a4"
+    }
+}
