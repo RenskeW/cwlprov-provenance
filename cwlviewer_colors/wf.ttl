@@ -1,0 +1,62 @@
+@prefix Workflow: <https://w3id.org/cwl/cwl#Workflow/> .
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <http://commonwl.org/cwltool#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl> a cwl:Workflow ;
+    ns1:original_cwlVersion "v1.2" ;
+    Workflow:steps <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2>,
+        <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1> ;
+    cwl:cwlVersion cwl:v1.2 ;
+    cwl:inputs <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_clt_input>,
+        <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_operation_input> ;
+    cwl:outputs <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_output> .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_output> cwl:outputSource <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/operation_output> ;
+    sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2> rdfs:label "CLT step" ;
+    rdfs:comment """"Second step is a CommandLineTool."
+""" ;
+    cwl:in <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/clt_input>,
+        <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/clt_input2> ;
+    cwl:run [ a cwl:CommandLineTool ;
+            cwl:arguments ( "$(inputs.clt_input)" "$(inputs.clt_input2)" ),
+                ( "$(inputs.clt_input)" "$(inputs.clt_input2)" ) ;
+            cwl:baseCommand ( "echo" ),
+                ( "echo" ) ;
+            cwl:inputs <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/run/clt_input>,
+                <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/run/clt_input2> ] .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/clt_input> cwl:source <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_clt_input> .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/clt_input2> cwl:source <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/operation_output> .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/run/clt_input> sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#clt_step2/run/clt_input2> sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1> rdfs:label "Operation step" ;
+    rdfs:comment """"First step is an operation."
+""" ;
+    cwl:in <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/operation_input> ;
+    cwl:out <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/operation_output> ;
+    cwl:run [ a cwl:Operation ;
+            cwl:inputs <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/run/operation_input> ;
+            cwl:outputs <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/run/operation_output> ] .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/operation_input> cwl:source <file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_operation_input> .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/run/operation_input> sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#operation_step1/run/operation_output> sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_clt_input> sld:default "clt_input_value" ;
+    sld:type xsd:string .
+
+<file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwlviewer_colors/wf.cwl#wf_operation_input> sld:default "operation_input_value" ;
+    sld:type xsd:string .
+
