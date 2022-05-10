@@ -1,0 +1,14 @@
+611c47d0faa4423abbc49ec4bb341af63970f15e  workflow/packed.cwl
+19718a09b1709ae394605b47f23d2a37c3f468ac  workflow/primary-job.json
+db0b72a6247310f04adaacad1594412ac6709663  metadata/directory-832162f6-2bfd-43fd-87e8-61910e16fd57.ttl
+b844ba6b8878383a6063c91e784452a0a674546d  metadata/provenance/primary.cwlprov.xml
+757bf6421af52413dae4b58ad280e6c60e237e41  metadata/provenance/primary.cwlprov.provn
+2e1d76bad0bb8345406ad13392c4ab8ea2f94489  metadata/provenance/primary.cwlprov.json
+6c12c7e79b9d5427cc3590ac2ebdd94f51b5f20d  metadata/provenance/primary.cwlprov.ttl
+b8199ac7ec3e3eb3a9a313cdcac80b70fdc9b3a4  metadata/provenance/primary.cwlprov.nt
+80209a10cb5afea659ce23f5b74f41903b3d6926  metadata/provenance/primary.cwlprov.jsonld
+df6b07c36082f51a0204965ac321458d7ee924f8  workflow/primary-output.json
+c28ec728d51ee364423119f96a8c332c6af594b1  snapshot/wf_nodocker.cwl
+1650614ef24148a6a9aaf1257ac7335c8da45109  metadata/logs/engine.b8379cab-26c5-4f9d-a389-341a4c85e27b.txt
+562ed751518587d497655a0849fb480bed1bb56c  metadata/manifest.json
+ad247be27bfdcb6ad200c15d369a9f807be55012  bag-info.txt

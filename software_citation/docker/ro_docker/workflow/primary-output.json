@@ -1,0 +1,32 @@
+{
+    "pc7_features": {
+        "basename": "pc7_features",
+        "nameroot": "pc7_features",
+        "nameext": "",
+        "class": "Directory",
+        "@id": "urn:uuid:93f6c5bf-8e08-4368-a34f-5fad6f577503",
+        "listing": [
+            {
+                "class": "File",
+                "location": "../data/01/01d8393f836a79fd05528ecede41c737342076db",
+                "basename": "pc7_T1011-D1.input",
+                "checksum": "sha1$01d8393f836a79fd05528ecede41c737342076db",
+                "@id": "urn:uuid:24c6abe7-f633-4cf1-b6c2-35ae3e8461b4"
+            },
+            {
+                "class": "File",
+                "location": "../data/e7/e73d55f489827ce73f62b96f6988e0a9691c486d",
+                "basename": "pc7_test.input",
+                "checksum": "sha1$e73d55f489827ce73f62b96f6988e0a9691c486d",
+                "@id": "urn:uuid:ec6c7517-3cfa-4359-a763-9fa8725f2a98"
+            },
+            {
+                "class": "File",
+                "location": "../data/2e/2e04d90f4d6565c61d71ecbf9390c23c0ddd5fed",
+                "basename": "pc7_T0963-D1.input",
+                "checksum": "sha1$2e04d90f4d6565c61d71ecbf9390c23c0ddd5fed",
+                "@id": "urn:uuid:e52d236f-f718-4229-b838-18c21b410a1a"
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+script:
+  class: File
+  location: /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/get_pc7_inputs.py
+fasta:
+  class: File
+  location: /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/test.fasta

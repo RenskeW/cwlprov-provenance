@@ -1,0 +1,35 @@
+{
+    "pc7_features": {
+        "basename": "pc7_features",
+        "nameroot": "pc7_features",
+        "nameext": "",
+        "class": "Directory",
+        "listing": [
+            {
+                "class": "File",
+                "location": "../data/01/01d8393f836a79fd05528ecede41c737342076db",
+                "basename": "pc7_T1011-D1.input",
+                "checksum": "sha1$01d8393f836a79fd05528ecede41c737342076db",
+                "size": 14913,
+                "@id": "urn:uuid:a5d0585d-d333-4a9b-a642-739658e713e4"
+            },
+            {
+                "class": "File",
+                "location": "../data/e7/e73d55f489827ce73f62b96f6988e0a9691c486d",
+                "basename": "pc7_test.input",
+                "checksum": "sha1$e73d55f489827ce73f62b96f6988e0a9691c486d",
+                "size": 219,
+                "@id": "urn:uuid:8914f9a7-13c3-4a17-8519-74650ffdce76"
+            },
+            {
+                "class": "File",
+                "location": "../data/2e/2e04d90f4d6565c61d71ecbf9390c23c0ddd5fed",
+                "basename": "pc7_T0963-D1.input",
+                "checksum": "sha1$2e04d90f4d6565c61d71ecbf9390c23c0ddd5fed",
+                "size": 1672,
+                "@id": "urn:uuid:9ca7a17e-d706-4f9b-ab44-9125e5522a44"
+            }
+        ],
+        "@id": "urn:uuid:832162f6-2bfd-43fd-87e8-61910e16fd57"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "script": {
+        "class": "File",
+        "location": "../data/e2/e228d3883e1770adf02f0a0bcdc259dda6b27e91",
+        "size": 4622,
+        "basename": "get_pc7_inputs.py",
+        "nameroot": "get_pc7_inputs",
+        "nameext": ".py",
+        "checksum": "sha1$e228d3883e1770adf02f0a0bcdc259dda6b27e91",
+        "@id": "urn:uuid:fa83980e-5e7e-4a1b-8238-6d08d3f1e99b"
+    },
+    "fasta": {
+        "class": "File",
+        "location": "../data/ac/ac39022d2a46ce20025b134101fdf0aae3b7cbe8",
+        "size": 355,
+        "basename": "test.fasta",
+        "nameroot": "test",
+        "nameext": ".fasta",
+        "checksum": "sha1$ac39022d2a46ce20025b134101fdf0aae3b7cbe8",
+        "@id": "urn:uuid:54baab9d-b29c-4677-a1b9-a82fb237aa33"
+    },
+    "outdir": "pc7_features"
+}

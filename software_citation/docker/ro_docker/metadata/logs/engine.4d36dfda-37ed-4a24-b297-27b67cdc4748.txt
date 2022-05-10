@@ -1,0 +1,25 @@
+[2022-05-10T10:07:55,157.521963Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro_docker wf_docker.cwl ../wf_job.yml
+[2022-05-10T10:07:55,163.640022Z] Resolved 'wf_docker.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/docker/wf_docker.cwl'
+[2022-05-10T10:07:57,727.513075Z] [job wf_docker.cwl] /private/tmp/docker_tmphygmffhp$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmphygmffhp,target=/xTxCHt \
+    --mount=type=bind,source=/private/tmp/docker_tmp_clsrgn5,target=/tmp \
+    --mount=type=bind,source=/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/test.fasta,target=/var/lib/cwl/stgbdf055c7-68b9-4d10-a7d8-8ba07134bfc0/test.fasta,readonly \
+    --mount=type=bind,source=/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/get_pc7_inputs.py,target=/var/lib/cwl/stg01e6452e-c84c-4fe8-af6a-df6635dcfdf7/get_pc7_inputs.py,readonly \
+    --workdir=/xTxCHt \
+    --read-only=true \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmptiafs5x_/20220510120757-726532.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/xTxCHt \
+    amancevice/pandas:1.3.4-slim \
+    python3 \
+    /var/lib/cwl/stg01e6452e-c84c-4fe8-af6a-df6635dcfdf7/get_pc7_inputs.py \
+    /var/lib/cwl/stgbdf055c7-68b9-4d10-a7d8-8ba07134bfc0/test.fasta \
+    -o \
+    pc7_features
+[2022-05-10T10:08:00,310.267925Z] [job wf_docker.cwl] Max memory used: 5MiB
+[2022-05-10T10:08:00,353.399038Z] [job wf_docker.cwl] completed success
+[2022-05-10T10:08:00,677.561998Z] Final process status is success

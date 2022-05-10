@@ -1,0 +1,10 @@
+[2022-05-10T10:08:43,865.278006Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro_software_req wf_nodocker.cwl ../wf_job.yml
+[2022-05-10T10:08:43,869.721174Z] Resolved 'wf_nodocker.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/software_citation/software_req/wf_nodocker.cwl'
+[2022-05-10T10:08:46,574.226856Z] [job wf_nodocker.cwl] /private/tmp/docker_tmpg7nr60gr$ python3 \
+    /private/tmp/docker_tmpqjc93j2p/stg0476e57b-b244-41c6-b6d6-3d2404341717/get_pc7_inputs.py \
+    /private/tmp/docker_tmpqjc93j2p/stgd14e1dca-3040-4c24-8027-70ba9218e55e/test.fasta \
+    -o \
+    pc7_features
+[2022-05-10T10:08:48,361.463070Z] [job wf_nodocker.cwl] Max memory used: 17MiB
+[2022-05-10T10:08:48,367.659092Z] [job wf_nodocker.cwl] completed success
+[2022-05-10T10:08:48,603.084087Z] Final process status is success
