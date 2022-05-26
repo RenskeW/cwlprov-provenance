@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:wfprov="http://purl.org/wf4ever/wfprov#" xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#" xmlns:cwlprov="https://w3id.org/cwl/prov#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:schema="http://schema.org/" xmlns:orcid="https://orcid.org/" xmlns:id="urn:uuid:" xmlns:data="urn:hash::sha1:" xmlns:sha256="nih:sha-256;" xmlns:researchobject="arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/" xmlns:metadata="arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/metadata/" xmlns:provenance="arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/metadata/provenance/" xmlns:wf="arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#" xmlns:input="arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/primary-job.json#" xmlns:wf4ever="http://purl.org/wf4ever/wf4ever#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="id:dbf94d96-5514-4fe6-ae66-aca79e50addb"/>
+  <prov:softwareAgent prov:id="id:e358b673-bba5-443e-9b52-38e01fd5034c">
+    <prov:label>cwltool 3.1.20220315080210</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowEngine</prov:type>
+  </prov:softwareAgent>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:e358b673-bba5-443e-9b52-38e01fd5034c"/>
+    <prov:starter prov:ref="id:dbf94d96-5514-4fe6-ae66-aca79e50addb"/>
+    <prov:time>2022-05-26T15:00:32.317184</prov:time>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5">
+    <prov:startTime>2022-05-26T15:00:32.318073</prov:startTime>
+    <prov:label>Run of workflow/packed.cwl#main</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:agent prov:ref="id:e358b673-bba5-443e-9b52-38e01fd5034c"/>
+    <prov:plan prov:ref="wf:main"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:starter prov:ref="id:e358b673-bba5-443e-9b52-38e01fd5034c"/>
+    <prov:time>2022-05-26T15:00:32.318295</prov:time>
+  </prov:wasStartedBy>
+  <prov:plan prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <prov:type xsi:type="xsd:QName">wfdesc:Workflow</prov:type>
+  </prov:plan>
+  <prov:plan prov:id="wf:main/tool">
+    <prov:type xsi:type="xsd:QName">wfdesc:Process</prov:type>
+  </prov:plan>
+  <prov:entity prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <wfdesc:hasSubProcess xsi:type="xsd:QName">wf:main/tool</wfdesc:hasSubProcess>
+  </prov:entity>
+  <prov:entity prov:id="data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:entity>
+  <prov:entity prov:id="id:fbea127d-1f43-456c-bffe-34bde191d2d3">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>somaticwf_0.5.0_mac.zip</cwlprov:basename>
+    <cwlprov:nameext>.zip</cwlprov:nameext>
+    <cwlprov:nameroot>somaticwf_0.5.0_mac</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:fbea127d-1f43-456c-bffe-34bde191d2d3"/>
+    <prov:generalEntity prov:ref="data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317"/>
+  </prov:specializationOf>
+  <prov:used>
+    <prov:activity prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:entity prov:ref="id:fbea127d-1f43-456c-bffe-34bde191d2d3"/>
+    <prov:time>2022-05-26T15:00:34.143671</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/zenodo_dataset</prov:role>
+  </prov:used>
+  <prov:activity prov:id="id:c78d53f1-9f89-474e-9dd2-12089ce0caec">
+    <prov:label>Run of workflow/packed.cwl#main/tool</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:ProcessRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:c78d53f1-9f89-474e-9dd2-12089ce0caec"/>
+    <prov:agent prov:ref="id:e358b673-bba5-443e-9b52-38e01fd5034c"/>
+    <prov:plan prov:ref="wf:main/tool"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:c78d53f1-9f89-474e-9dd2-12089ce0caec"/>
+    <prov:starter prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:time>2022-05-26T15:00:34.165183</prov:time>
+  </prov:wasStartedBy>
+  <prov:entity prov:id="data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:entity>
+  <prov:entity prov:id="id:dc1b862f-eed6-430b-9bad-410e378cad26">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>somaticwf_0.5.0_mac.zip</cwlprov:basename>
+    <cwlprov:nameext>.zip</cwlprov:nameext>
+    <cwlprov:nameroot>somaticwf_0.5.0_mac</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:dc1b862f-eed6-430b-9bad-410e378cad26"/>
+    <prov:generalEntity prov:ref="data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317"/>
+  </prov:specializationOf>
+  <prov:used>
+    <prov:activity prov:ref="id:c78d53f1-9f89-474e-9dd2-12089ce0caec"/>
+    <prov:entity prov:ref="id:dc1b862f-eed6-430b-9bad-410e378cad26"/>
+    <prov:time>2022-05-26T15:00:34.317803</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/tool/zenodo_dataset</prov:role>
+  </prov:used>
+  <prov:entity prov:id="data:5af9e5e451c68dd24c367f33663f06ea9695e768">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+  </prov:entity>
+  <prov:entity prov:id="id:7ee004cd-063c-480c-b7f4-082fa7374a9a">
+    <prov:type xsi:type="xsd:QName">wf4ever:File</prov:type>
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <cwlprov:basename>script.py</cwlprov:basename>
+    <cwlprov:nameext>.py</cwlprov:nameext>
+    <cwlprov:nameroot>script</cwlprov:nameroot>
+  </prov:entity>
+  <prov:specializationOf>
+    <prov:specificEntity prov:ref="id:7ee004cd-063c-480c-b7f4-082fa7374a9a"/>
+    <prov:generalEntity prov:ref="data:5af9e5e451c68dd24c367f33663f06ea9695e768"/>
+  </prov:specializationOf>
+  <prov:used>
+    <prov:activity prov:ref="id:c78d53f1-9f89-474e-9dd2-12089ce0caec"/>
+    <prov:entity prov:ref="id:7ee004cd-063c-480c-b7f4-082fa7374a9a"/>
+    <prov:time>2022-05-26T15:00:34.321999</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/tool/script</prov:role>
+  </prov:used>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:c78d53f1-9f89-474e-9dd2-12089ce0caec"/>
+    <prov:ender prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:time>2022-05-26T15:00:34.413958</prov:time>
+  </prov:wasEndedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5"/>
+    <prov:ender prov:ref="id:e358b673-bba5-443e-9b52-38e01fd5034c"/>
+    <prov:time>2022-05-26T15:00:34.418907</prov:time>
+  </prov:wasEndedBy>
+</prov:document>

@@ -1,0 +1,13 @@
+[2022-05-26T13:00:28,946.544170Z] [cwltool] /Users/renskedewit/Documents/GitHub/cwltool/env/bin/cwltool --provenance ro wf.cwl wf_job.yml
+[2022-05-26T13:00:28,984.128952Z] Resolved 'wf.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwl_metadata/annotated_prov_example/wf.cwl'
+[2022-05-26T13:00:33,906.100988Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwl_metadata/data/somaticwf_0.5.0_mac.zip
+[2022-05-26T13:00:34,143.790007Z] [workflow ] start
+[2022-05-26T13:00:34,145.594120Z] [workflow ] starting step tool
+[2022-05-26T13:00:34,146.121979Z] [step tool] start
+[2022-05-26T13:00:34,166.280031Z] [job tool] /private/tmp/docker_tmpezpavv1v$ python3 \
+    /private/tmp/docker_tmp_u6g9gpc/stg637b9f06-5f46-4107-a867-6ded5de73e5b/script.py \
+    /private/tmp/docker_tmp_u6g9gpc/stg729f2fcb-91d7-4585-bada-6682f260e03a/somaticwf_0.5.0_mac.zip
+[2022-05-26T13:00:34,414.478064Z] [job tool] completed success
+[2022-05-26T13:00:34,415.299177Z] [step tool] completed success
+[2022-05-26T13:00:34,415.513039Z] [workflow ] completed success
+[2022-05-26T13:00:34,784.967899Z] Final process status is success

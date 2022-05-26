@@ -1,0 +1,100 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix id: <urn:uuid:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wf: <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:c78d53f1-9f89-474e-9dd2-12089ce0caec a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/tool"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/tool> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2022-05-26T15:00:34.413958"^^xsd:dateTime ;
+            prov:hadActivity id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-05-26T15:00:34.165183"^^xsd:dateTime ;
+            prov:hadActivity id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2022-05-26T15:00:34.321999"^^xsd:dateTime ;
+            prov:entity id:7ee004cd-063c-480c-b7f4-082fa7374a9a ;
+            prov:hadRole <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/tool/script> ],
+        [ a prov:Usage ;
+            prov:atTime "2022-05-26T15:00:34.317803"^^xsd:dateTime ;
+            prov:entity id:dc1b862f-eed6-430b-9bad-410e378cad26 ;
+            prov:hadRole <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/tool/zenodo_dataset> ] ;
+    prov:wasAssociatedWith id:e358b673-bba5-443e-9b52-38e01fd5034c .
+
+wf:main a wfdesc:Workflow,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string ;
+    wfdesc:hasSubProcess <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/tool> .
+
+data:5af9e5e451c68dd24c367f33663f06ea9695e768 a wfprov:Artifact,
+        prov:Entity .
+
+id:7ee004cd-063c-480c-b7f4-082fa7374a9a a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:5af9e5e451c68dd24c367f33663f06ea9695e768 ;
+    cwlprov:basename "script.py"^^xsd:string ;
+    cwlprov:nameext ".py"^^xsd:string ;
+    cwlprov:nameroot "script"^^xsd:string .
+
+id:dbf94d96-5514-4fe6-ae66-aca79e50addb a prov:Agent .
+
+id:dc1b862f-eed6-430b-9bad-410e378cad26 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317 ;
+    cwlprov:basename "somaticwf_0.5.0_mac.zip"^^xsd:string ;
+    cwlprov:nameext ".zip"^^xsd:string ;
+    cwlprov:nameroot "somaticwf_0.5.0_mac"^^xsd:string .
+
+id:fbea127d-1f43-456c-bffe-34bde191d2d3 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317 ;
+    cwlprov:basename "somaticwf_0.5.0_mac.zip"^^xsd:string ;
+    cwlprov:nameext ".zip"^^xsd:string ;
+    cwlprov:nameroot "somaticwf_0.5.0_mac"^^xsd:string .
+
+<arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/tool> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+data:f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317 a wfprov:Artifact,
+        prov:Entity .
+
+id:d47e2e6b-f61e-46c0-81b6-b10a6a4812d5 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2022-05-26T15:00:34.418907"^^xsd:dateTime ;
+            prov:hadActivity id:e358b673-bba5-443e-9b52-38e01fd5034c ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-05-26T15:00:32.318295"^^xsd:dateTime ;
+            prov:hadActivity id:e358b673-bba5-443e-9b52-38e01fd5034c ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2022-05-26T15:00:34.143671"^^xsd:dateTime ;
+            prov:entity id:fbea127d-1f43-456c-bffe-34bde191d2d3 ;
+            prov:hadRole <arcp://uuid,d47e2e6b-f61e-46c0-81b6-b10a6a4812d5/workflow/packed.cwl#main/zenodo_dataset> ] ;
+    prov:startedAtTime "2022-05-26T15:00:32.318073"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:e358b673-bba5-443e-9b52-38e01fd5034c .
+
+id:e358b673-bba5-443e-9b52-38e01fd5034c a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 3.1.20220315080210"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-05-26T15:00:32.317184"^^xsd:dateTime ;
+            prov:hadActivity id:dbf94d96-5514-4fe6-ae66-aca79e50addb ] .
+

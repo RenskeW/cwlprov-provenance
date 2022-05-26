@@ -1,0 +1,5 @@
+# A dataset published on Zenodo which has its own, version-specific DOI
+zenodo_dataset:
+  class: File
+  path: /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/cwl_metadata/data/somaticwf_0.5.0_mac.zip
+  # s:identifier: https://doi.org/10.17632/97hj93mkfd.3

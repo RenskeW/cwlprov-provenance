@@ -1,120 +1,108 @@
-# A dataset downloaded which does not have its own DOI but was described in a paper
+
+# A dataset published on Zenodo which has its own, version-specific DOI
+zenodo_dataset:
+  class: File
+  path: ./data/somaticwf_0.5.0_mac.zip
+  s:identifier: https://doi.org/10.17632/97hj93mkfd.3
+
+# A dataset which does not have its own DOI but was described in a paper
 biodl_dataset:
   class: File
-  location: /Users/renskedewit/Documents/GitHub/cwl-epitope/tools/biodl_small.csv
-  <class??>: s:Dataset
-  s:name: BioDL
-  s:url: https://github.com/ibivu/pipenn/#what-do-data-set-folders-contain # location of page describing the dataset
-  s:distribution: https://www.ibi.vu.nl/downloads/PIPENN/PIPENN/BioDL-Datasets/prepared_biolip_win_p_testing.csv # downloadable form of dataset
-  s:citation:
-  - class: s:ScholarlyArticle
-    s:identifier: https://doi.org/10.1093/bioinformatics/btac071
-  s:isBasedOn:
-  - class: s:DataCatalog
-    s:name: BioLip # the bioDL dataset uses data from this database
+  path: ./data/prepared_biolip_win_p_testing.csv
+  s:Dataset:
+    s:url: https://github.com/ibivu/pipenn/#what-do-data-set-folders-contain # location of page describing the dataset
+    s:distribution: # Downloadable form of dataset. Expected type: s:DataDownload
+      s:url: https://www.ibi.vu.nl/downloads/PIPENN/PIPENN/BioDL-Datasets/prepared_biolip_win_p_testing.csv
+      s:dateModified: 2021-08-02T02:52 # When dataset was last modified
+    s:dateCreated: 2022-05-26T11:57 # Download date
     s:citation:
-      class: s:ScholarlyArticle
-      s:identifier: https://doi.org/10.1093/nar/gks966
+    - class: s:ScholarlyArticle
+      s:identifier: https://doi.org/10.1093/bioinformatics/btac071 # article describing BioDL dataset
+    s:isBasedOn:
+    - class: s:DataCatalog
+      s:name: BioLip # the bioDL dataset includes data from this database
+      s:citation:
+        class: s:ScholarlyArticle
+        s:identifier: https://doi.org/10.1093/nar/gks966 # article describing BioLip database
+
+# Set of entries downloaded from the Protein Data Bank
+multiple_pdb_entries:
+  class: Directory
+  path: ./data/pdb_entries
+  s:Dataset:
+    s:dateCreated: 2022-05-26T13:41 # download date
+    s:includedInDataCatalog:
+      s:name: "Protein Data Bank"
+      s:identifier: https://fairsharing.org/FAIRsharing.2t35ja
+    s:hasPart: # the individual entries in this dataset
+    - s:name: "6m17"
+      s:identifier: https://doi.org/10.2210/pdb6m17/pdb # not specific for version of pdb entry
+      s:version: 3.1 # version of PDB entry
+      format: http://edamontology.org/format_1477 # mmCIF format
+      s:measurementTechnique: "ELECTRON MICROSCOPY"
+    - s:name: "4wv4"
+      s:identifier: https://doi.org/10.2210/pdb4WV4/pdb
+      s:version: 1.0
+      format: http://edamontology.org/format_1477 # mmCIF format
+      s:citation: 
+        s:identifier: https://doi.org/10.1038/ncomms7011 # publication about this pdb entry
 
 # A dataset which was downloaded as the result of a query
-hpa_dataset: # all brain-elevated proteins (= a query!)
+hpa_dataset: 
   class: File
-  location: ./data/hpa_download.tsv
-  <class??>: s:Dataset
-  s:name: "HPA brain-specific proteins"
-  s:includedInDataCatalog:
-    class: s:DataCatalog
-    s:name: "HPA Brain Atlas"
-    s:url: https://www.proteinatlas.org/humanproteome/brain
+  path: ./data/tissue_category_rna_brain_Detected.tsv
+  s:Dataset:
+    s:name: "HPA brain-specific proteins"
+    s:dateCreated: 2022-05-26T13:53 # download date
+    s:distribution:
+      s:url: https://www.proteinatlas.org/search/tissue_category_rna%3Abrain%3BDetected+in+single?format=tsv # not specific to database version
     s:citation:
-    - class: s:ScholarlyArticle # the article specific for the Brain Atlas
-      s:identifier: <doi>
-    s:isPartOf:
+      class: s:ScholarlyArticle
+      s:identifier: https://doi.org/10.1126/science.aay5947
+    s:includedInDataCatalog:
       class: s:DataCatalog
       s:name: "Human Protein Atlas"
       s:url: https://www.proteinatlas.org/
       s:identifier: https://fairsharing.org/FAIRsharing.j0t0pe # identifier for the entire HPA
-      s:version: "21.0" # the version of the entire HPA
+      s:version: "21.0" # the database version
       s:citation:
       - class: s:ScholarlyArticle # the article describing the entire HPA database
-        s:identifier: <doi> 
-  ## The search query (how do we fit this in?):
-  s:PotentialAction: # https://schema.org/SearchAction; https://schema.org/query
-    type: s:SearchAction
-       s:query: tissue_category_rna:brain;Detected in single
-
-# PDB download
-pdb_dataset:
-  class: Directory
-  location: <location>
-  <class?>: s:Dataset # or s:DataDownload?
-  s:name: Download of selected set of pdb structures
-  s:measurementTechnique: "Cryo-EM" # example
-  s:includedInDataCatalog: # dataset is subset of PDB
-    class: s:DataCatalog
-    s:name: Protein Data Bank
-    s:identifier: https://fairsharing.org/FAIRsharing.2t35ja
-  ### download date 
-  s:dateCreated: <the download date> 
-  s:dateModified: <the download date>
-
-# SAbDab subset of database, summary file about subset of structures based on query
-sabdab_subset: #summary file
-  class: File
-  location: ./data/sabdab_query_summaryfile.tsv
-  <class?>: s:Dataset
-  s:DateCreated: <download date>
-  s:includedInDataCatalog:
-    class: s:DataCatalog
-    s:name: SAbDab
-    s:url: http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/
-    s:citation: <publication about database>
-    s:PotentialAction:
-      class: s:SearchAction
-      s:query: http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/search/?ABtype=All&method=ELECTRON+MICROSCOPY&species=HOMO+SAPIENS&resolution=&rfactor=&antigen=All&ltype=All&constantregion=All&affinity=All&isin_covabdab=All&isin_therasabdab=True&chothiapos=&restype=ALA&field_0=Antigens&keyword_0=
-      # query: ABtype = All & method=ELECTRON MICROSCOPY & species = HOMO SAPIENS &....
-      s:startTime: <time of query = download date?> # alternative to dateCreated/dateModified/endTime?
-
+        s:identifier: https://doi.org/10.1126/science.1260419
+      ## The search query
+      s:PotentialAction: # https://schema.org/SearchAction; https://schema.org/query
+        class: s:SearchAction
+        s:actionStatus: CompletedActionStatus
+        s:query: tissue_category_rna:brain;Detected in single
+        s:startTime: 2022-05-26T13:53
+        s:agent:
+          class: s:Person
+          s:name: "Renske"
+          s:identifier: <ORCID identifier>
+        s:object: # the object on which the SearchAction was carried out
+          s:name: "Human Protein Atlas"
+          s:version: 21.0
+    
 # A file which was derived from a file downloaded from a database
 processed_sabdab_summary_file:
   class: File
-  location: ./data/sabdab_query_summaryfile.tsv # a file derived from a summary file downloaded from SabDab
-  <class?>: s:Dataset
-  s:isBasedOn:
-    class: s:DataCatalog # this directly points to the database, there could be an intermediate step to the downloaded file
-    s:name: SAbDab
-    s:url: http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/
-    s:citation: <citation>
+  path: ./data/SAbDab_protein_antigens_PDB_chains.csv # a file derived from a summary file downloaded from SabDab
+  s:Dataset:
+    s:dateCreated: 
+    s:isBasedOn:
+      class: s:Dataset
+      path: ./data/sabdab_query_summaryfile.tsv
+      s:name: SAbDab summary file
+      s:dateCreated: 2022-05-26
+      s:includedInDataCatalog:
+        s:name: Structural Antibody Database
+        s:url: http://opig.stats.ox.ac.uk/webapps/newsabdab/sabdab/
+        s:citation: 
+          s:identifier: https://doi.org/10.1093/nar/gkab1050
 
-# 1 specific entry from the PDB
-pdb_entry:
-  class: File
-  location: ./data/6m17.cif
-  format: http://edamontology.org/format_1477 ## mmCIF format
-  s:identifier: https://doi.org/10.2210/pdb6m17/pdb # version-unspecific doi of pdb entry
-  s:version: 3.1 # version of entry
-  dateCreated: <the download date?>
-  s:includedInDataCatalog:
-    s:name: "Protein Data Bank"
-    s:identifier: <PID of PDB>
-  s:citation: <publication describing this pdb entry>
-  s:measurementTechnique: "Electron Microscopy" # for this entry
+$namespaces:
+  s: https://schema.org/
+  edam: http://edamontology.org/
 
-# multiple entries from the pdb, but not as the result of a query
-two_pdb_entries:
-  class: Directory
-  location: <location>
-  s:includedInDataCatalog:
-    s:name: "Protein Data Bank"
-    s:identifier: <PID of PDB>
-  s:hasPart: # the individual entries in this dataset
-  - s:name: "6m17"
-    s:identifier: https://doi.org/10.2210/pdb6m17/pdb
-    s:version: 3.1
-    format: http://edamontology.org/format_1477 ## mmCIF format
-    s:measurementTechnique: "NMR"
-  - s:name: "4wv4"
-    s:identifier: https://doi.org/10.2210/pdb4WV4/pdb
-    s:version: 1.0
-
-  
+$schemas:
+- https://schema.org/version/latest/schemaorg-current-https.rdf
+- https://edamontology.org/EDAM_1.25.owl

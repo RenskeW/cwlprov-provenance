@@ -1,0 +1,11 @@
+{
+    "zenodo_dataset": {
+        "class": "File",
+        "location": "../data/f8/f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317",
+        "size": 32618515,
+        "basename": "somaticwf_0.5.0_mac.zip",
+        "nameroot": "somaticwf_0.5.0_mac",
+        "nameext": ".zip",
+        "checksum": "sha1$f8d8d0d3a3f847e49503ddae14a2d2a2d2f35317"
+    }
+}
