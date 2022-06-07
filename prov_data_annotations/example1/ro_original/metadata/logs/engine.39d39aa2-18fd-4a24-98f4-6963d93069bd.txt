@@ -1,0 +1,7 @@
+[2022-06-06T10:25:30,38.017035Z] [cwltool] /usr/local/bin/cwltool --provenance ro_original date.cwl input_date.yml
+[2022-06-06T10:25:30,46.049118Z] Resolved 'date.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/date.cwl'
+[2022-06-06T10:25:37,339.484930Z] [job date.cwl] /private/tmp/docker_tmpokwjyraf$ date \
+    -r \
+    /private/tmp/docker_tmp2c0m47ux/stg9bdec198-1263-4418-b4bc-223a4a6ad751/file.txt
+[2022-06-06T10:25:37,366.298914Z] [job date.cwl] completed success
+[2022-06-06T10:25:37,533.562899Z] Final process status is success

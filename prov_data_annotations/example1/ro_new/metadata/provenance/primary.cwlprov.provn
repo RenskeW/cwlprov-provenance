@@ -1,0 +1,64 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,7d55500e-4b73-41e8-bf57-d9c03997782e/>
+  prefix metadata <arcp://uuid,7d55500e-4b73-41e8-bf57-d9c03997782e/metadata/>
+  prefix provenance <arcp://uuid,7d55500e-4b73-41e8-bf57-d9c03997782e/metadata/provenance/>
+  prefix wf <arcp://uuid,7d55500e-4b73-41e8-bf57-d9c03997782e/workflow/packed.cwl#>
+  prefix input <arcp://uuid,7d55500e-4b73-41e8-bf57-d9c03997782e/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:f1033053-87be-41f7-b56e-08f151585749)
+  agent(id:d3c9e363-d759-4039-abe7-63cbfaec92db, [prov:type='prov:SoftwareAgent', prov:type='wfprov:WorkflowEngine', prov:label="cwltool 3.1.20220315080210"])
+  wasStartedBy(id:d3c9e363-d759-4039-abe7-63cbfaec92db, -, id:f1033053-87be-41f7-b56e-08f151585749, 2022-06-07T17:58:21.575574)
+  activity(id:7d55500e-4b73-41e8-bf57-d9c03997782e, 2022-06-07T17:58:21.576631, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:d3c9e363-d759-4039-abe7-63cbfaec92db, wf:main)
+  wasStartedBy(id:7d55500e-4b73-41e8-bf57-d9c03997782e, -, id:d3c9e363-d759-4039-abe7-63cbfaec92db, 2022-06-07T17:58:21.576889)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Process', prov:label="Prospective provenance"])
+  entity(data:86ec86fdbbe70863a78453f69349568f9d1f14a1, [prov:type='wfprov:Artifact'])
+  entity(id:92fc295f-f6cb-444b-8ffe-0f604b127858, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="file.tsv", cwlprov:nameroot="file", cwlprov:nameext=".tsv", prov:label="file_label"])
+  specializationOf(id:92fc295f-f6cb-444b-8ffe-0f604b127858, data:86ec86fdbbe70863a78453f69349568f9d1f14a1)
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:92fc295f-f6cb-444b-8ffe-0f604b127858, 2022-06-07T17:58:21.588384, [prov:role='wf:main/file'])
+  entity(id:979bafe3-b4f0-4527-9541-ea1236cdd4ef, [prov:type='prov:Collection', prov:type='prov:Dictionary', prov:type='wfprov:Artifact', prov:hadDictionaryMember='id:92c6ed6a-c213-4305-a383-4889b9be414d', prov:hadDictionaryMember='id:f42db750-25c5-4811-9d0c-e4f3d4d69a6e', prov:hadDictionaryMember='id:ff5c4d7d-9519-4441-a9b4-5f0922240ce2'])
+  entity(data:63403d88865650fff3d3159efe7ec3b01e9d3401, [prov:type='wfprov:Artifact', prov:value="https://schema.org/"])
+  hadMember(id:979bafe3-b4f0-4527-9541-ea1236cdd4ef, data:63403d88865650fff3d3159efe7ec3b01e9d3401)
+  entity(id:92c6ed6a-c213-4305-a383-4889b9be414d, [prov:type='prov:KeyEntityPair', prov:pairKey="s", prov:pairEntity='data:63403d88865650fff3d3159efe7ec3b01e9d3401'])
+  entity(data:ad9aa45bff6d25c6577822104bc2b47ff15c8665, [prov:type='wfprov:Artifact', prov:value="https://www.iana.org/assignments/media-types/"])
+  hadMember(id:979bafe3-b4f0-4527-9541-ea1236cdd4ef, data:ad9aa45bff6d25c6577822104bc2b47ff15c8665)
+  entity(id:f42db750-25c5-4811-9d0c-e4f3d4d69a6e, [prov:type='prov:KeyEntityPair', prov:pairKey="iana", prov:pairEntity='data:ad9aa45bff6d25c6577822104bc2b47ff15c8665'])
+  entity(data:a366a96971a43c97202f52829b78b9e47772c235, [prov:type='wfprov:Artifact', prov:value="urn:uuid:979bafe3-b4f0-4527-9541-ea1236cdd4ef"])
+  hadMember(id:979bafe3-b4f0-4527-9541-ea1236cdd4ef, data:a366a96971a43c97202f52829b78b9e47772c235)
+  entity(id:ff5c4d7d-9519-4441-a9b4-5f0922240ce2, [prov:type='prov:KeyEntityPair', prov:pairKey="@id", prov:pairEntity='data:a366a96971a43c97202f52829b78b9e47772c235'])
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:979bafe3-b4f0-4527-9541-ea1236cdd4ef, 2022-06-07T17:58:21.594852, [prov:role='wf:main/$namespaces'])
+  entity(data:604ee3240c2fe8b99691460247a9eeb1acdcc28f, [prov:type='wfprov:Artifact', prov:value="https://schema.org/version/latest/schemaorg-current-https.rdf"])
+  entity(id:6dd0889a-16b6-4987-b72e-46db73aa4117, [prov:type='prov:Collection', prov:type='wfprov:Artifact'])
+  hadMember(id:6dd0889a-16b6-4987-b72e-46db73aa4117, data:604ee3240c2fe8b99691460247a9eeb1acdcc28f)
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:6dd0889a-16b6-4987-b72e-46db73aa4117, 2022-06-07T17:58:21.596642, [prov:role='wf:main/$schemas'])
+  entity(data:86ec86fdbbe70863a78453f69349568f9d1f14a1, [prov:type='wfprov:Artifact'])
+  entity(id:9322ab38-17f5-400d-bec4-90fe85c791fa, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="file.tsv", cwlprov:nameroot="file", cwlprov:nameext=".tsv", prov:label="file_label"])
+  specializationOf(id:9322ab38-17f5-400d-bec4-90fe85c791fa, data:86ec86fdbbe70863a78453f69349568f9d1f14a1)
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:9322ab38-17f5-400d-bec4-90fe85c791fa, 2022-06-07T17:58:21.610218, [prov:role='wf:main/date.cwl/file'])
+  entity(id:63551bef-a0e0-45cb-91b7-6c398381d6de, [prov:type='prov:Collection', prov:type='prov:Dictionary', prov:type='wfprov:Artifact', prov:hadDictionaryMember='id:548de65f-6dba-441e-a85b-b6558a95c50e', prov:hadDictionaryMember='id:92546a22-0fe8-446c-81f4-7dc3a3b5f5be', prov:hadDictionaryMember='id:6e9ca3ed-e3f1-4bd2-ab71-714376ad5ed4'])
+  entity(data:63403d88865650fff3d3159efe7ec3b01e9d3401, [prov:type='wfprov:Artifact', prov:value="https://schema.org/"])
+  hadMember(id:63551bef-a0e0-45cb-91b7-6c398381d6de, data:63403d88865650fff3d3159efe7ec3b01e9d3401)
+  entity(id:548de65f-6dba-441e-a85b-b6558a95c50e, [prov:type='prov:KeyEntityPair', prov:pairKey="s", prov:pairEntity='data:63403d88865650fff3d3159efe7ec3b01e9d3401'])
+  entity(data:ad9aa45bff6d25c6577822104bc2b47ff15c8665, [prov:type='wfprov:Artifact', prov:value="https://www.iana.org/assignments/media-types/"])
+  hadMember(id:63551bef-a0e0-45cb-91b7-6c398381d6de, data:ad9aa45bff6d25c6577822104bc2b47ff15c8665)
+  entity(id:92546a22-0fe8-446c-81f4-7dc3a3b5f5be, [prov:type='prov:KeyEntityPair', prov:pairKey="iana", prov:pairEntity='data:ad9aa45bff6d25c6577822104bc2b47ff15c8665'])
+  entity(data:566c7aa9bfbf39e0a2d0e97449d106d26c38e748, [prov:type='wfprov:Artifact', prov:value="urn:uuid:63551bef-a0e0-45cb-91b7-6c398381d6de"])
+  hadMember(id:63551bef-a0e0-45cb-91b7-6c398381d6de, data:566c7aa9bfbf39e0a2d0e97449d106d26c38e748)
+  entity(id:6e9ca3ed-e3f1-4bd2-ab71-714376ad5ed4, [prov:type='prov:KeyEntityPair', prov:pairKey="@id", prov:pairEntity='data:566c7aa9bfbf39e0a2d0e97449d106d26c38e748'])
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:63551bef-a0e0-45cb-91b7-6c398381d6de, 2022-06-07T17:58:21.641972, [prov:role='wf:main/date.cwl/$namespaces'])
+  entity(data:604ee3240c2fe8b99691460247a9eeb1acdcc28f, [prov:type='wfprov:Artifact', prov:value="https://schema.org/version/latest/schemaorg-current-https.rdf"])
+  entity(id:4b886c2f-536e-404a-a372-214e56c7a1c5, [prov:type='prov:Collection', prov:type='wfprov:Artifact'])
+  hadMember(id:4b886c2f-536e-404a-a372-214e56c7a1c5, data:604ee3240c2fe8b99691460247a9eeb1acdcc28f)
+  used(id:7d55500e-4b73-41e8-bf57-d9c03997782e, id:4b886c2f-536e-404a-a372-214e56c7a1c5, 2022-06-07T17:58:21.644202, [prov:role='wf:main/date.cwl/$schemas'])
+  wasEndedBy(id:7d55500e-4b73-41e8-bf57-d9c03997782e, -, id:d3c9e363-d759-4039-abe7-63cbfaec92db, 2022-06-07T17:58:21.949719)
+endDocument

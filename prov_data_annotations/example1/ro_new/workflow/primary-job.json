@@ -1,0 +1,30 @@
+{
+    "file": {
+        "class": "File",
+        "label": "file_label",
+        "format": "https://www.iana.org/assignments/media-types/text/tab-separated-values",
+        "https://schema.org/Dataset": {
+            "https://schema.org/name": "dataset_name",
+            "https://schema.org/identifier": "dataset_identifier",
+            "https://schema.org/dateCreated": "2022-06-06",
+            "https://schema.org/citation": {
+                "https://schema.org/identifier": "https://doi.org/10.1038/171737a0"
+            }
+        },
+        "location": "../data/86/86ec86fdbbe70863a78453f69349568f9d1f14a1",
+        "size": 45,
+        "basename": "file.tsv",
+        "nameroot": "file",
+        "nameext": ".tsv",
+        "checksum": "sha1$86ec86fdbbe70863a78453f69349568f9d1f14a1",
+        "@id": "urn:uuid:92fc295f-f6cb-444b-8ffe-0f604b127858"
+    },
+    "$namespaces": {
+        "s": "https://schema.org/",
+        "iana": "https://www.iana.org/assignments/media-types/",
+        "@id": "urn:uuid:979bafe3-b4f0-4527-9541-ea1236cdd4ef"
+    },
+    "$schemas": [
+        "https://schema.org/version/latest/schemaorg-current-https.rdf"
+    ]
+}

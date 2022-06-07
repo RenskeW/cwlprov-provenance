@@ -1,0 +1,21 @@
+{
+    "file": {
+        "class": "File",
+        "label": "Text file",
+        "https://schema.org/name": "example_file",
+        "location": "../data/f7/f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0",
+        "size": 5,
+        "basename": "file.txt",
+        "nameroot": "file",
+        "nameext": ".txt",
+        "checksum": "sha1$f7ff9e8b7bb2e09b70935a5d785e0cc5d9d0abf0",
+        "@id": "urn:uuid:b3cdab49-619c-46f9-9aab-9e74480c675b"
+    },
+    "$namespaces": {
+        "s": "https://schema.org/",
+        "@id": "urn:uuid:6a59ff5e-0967-43a3-ba23-aed810b0f651"
+    },
+    "$schemas": [
+        "https://schema.org/version/latest/schemaorg-current-https.rdf"
+    ]
+}
