@@ -1,14 +1,13 @@
 {
     "file": {
         "class": "File",
-        "label": "file_label",
         "format": "https://www.iana.org/assignments/media-types/text/tab-separated-values",
-        "https://schema.org/Dataset": {
-            "https://schema.org/name": "dataset_name",
-            "https://schema.org/identifier": "dataset_identifier",
-            "https://schema.org/dateCreated": "2022-06-06",
-            "https://schema.org/citation": {
-                "https://schema.org/identifier": "https://doi.org/10.1038/171737a0"
+        "http://schema.org/Dataset": {
+            "http://schema.org/name": "dataset_name",
+            "http://schema.org/identifier": "dataset_identifier",
+            "http://schema.org/dateCreated": "2022-06-06",
+            "http://schema.org/citation": {
+                "http://schema.org/identifier": "<doi>"
             }
         },
         "location": "../data/86/86ec86fdbbe70863a78453f69349568f9d1f14a1",
@@ -17,12 +16,12 @@
         "nameroot": "file",
         "nameext": ".tsv",
         "checksum": "sha1$86ec86fdbbe70863a78453f69349568f9d1f14a1",
-        "@id": "urn:uuid:92fc295f-f6cb-444b-8ffe-0f604b127858"
+        "@id": "urn:uuid:202ac448-6c71-4729-91c8-6ebdbcd1e14f"
     },
     "$namespaces": {
-        "s": "https://schema.org/",
+        "s": "http://schema.org/",
         "iana": "https://www.iana.org/assignments/media-types/",
-        "@id": "urn:uuid:979bafe3-b4f0-4527-9541-ea1236cdd4ef"
+        "@id": "urn:uuid:69c24628-7658-4bb7-9f6a-17b7708268c0"
     },
     "$schemas": [
         "https://schema.org/version/latest/schemaorg-current-https.rdf"

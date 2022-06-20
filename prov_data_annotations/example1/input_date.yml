@@ -1,17 +1,16 @@
 file:
   class: File
   path: ./file.tsv
-  label: file_label
   format: iana:text/tab-separated-values
   s:Dataset:
     s:name: "dataset_name"
     s:identifier: "dataset_identifier"
     s:dateCreated: 2022-06-06
     s:citation:
-      s:identifier: https://doi.org/10.1038/171737a0
+      s:identifier: <doi>
 
 $namespaces:
-  s: https://schema.org/
+  s: http://schema.org/
   iana: https://www.iana.org/assignments/media-types/
 
 $schemas:

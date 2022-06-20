@@ -1,0 +1,7 @@
+[2022-06-13T21:03:58,924.235106Z] [cwltool] /Users/renskedewit/Documents/GitHub/cwltool/cwltool/__main__.py --provenance /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/ro_new /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/date.cwl /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/input_date.yml
+[2022-06-13T21:03:58,943.639040Z] Resolved '/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/date.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example1/date.cwl'
+[2022-06-13T21:07:23,731.918097Z] [job date.cwl] /private/tmp/docker_tmpv1m_cm0a$ date \
+    -r \
+    /private/tmp/docker_tmp05iwlay4/stgcf9268e7-ba1f-40da-a94d-6e600692c3f9/file.tsv
+[2022-06-13T21:07:23,825.068951Z] [job date.cwl] completed success
+[2022-06-13T21:07:24,351.976871Z] Final process status is success
