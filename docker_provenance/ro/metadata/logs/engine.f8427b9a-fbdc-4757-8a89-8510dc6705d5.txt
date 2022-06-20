@@ -1,0 +1,22 @@
+[2022-05-30T10:23:13,209.371805Z] [cwltool] /usr/local/bin/cwltool --provenance ro test_docker_provenance.cwl
+[2022-05-30T10:23:13,220.348835Z] Resolved 'test_docker_provenance.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/test_docker_provenance.cwl'
+[2022-05-30T10:23:16,967.156887Z] [job test_docker_provenance.cwl] /private/tmp/docker_tmp18z37kfy$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmp18z37kfy,target=/bLvnRB \
+    --mount=type=bind,source=/private/tmp/docker_tmpn418tzfi,target=/tmp \
+    --mount=type=bind,source=/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/test.py,target=/var/lib/cwl/stgf17077d9-9f84-4316-bd3a-b6efa1055991/test.py,readonly \
+    --workdir=/bLvnRB \
+    --read-only=true \
+    --net=none \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmpa5yom92s/20220530122316-966480.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/bLvnRB \
+    amancevice/pandas:1.3.4-slim \
+    python3 \
+    /var/lib/cwl/stgf17077d9-9f84-4316-bd3a-b6efa1055991/test.py
+[2022-05-30T10:23:20,902.539015Z] [job test_docker_provenance.cwl] Max memory used: 4MiB
+[2022-05-30T10:23:20,905.628920Z] [job test_docker_provenance.cwl] completed success
+[2022-05-30T10:23:21,42.825937Z] Final process status is success

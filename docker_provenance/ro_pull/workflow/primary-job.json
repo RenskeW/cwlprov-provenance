@@ -1,0 +1,12 @@
+{
+    "script": {
+        "class": "File",
+        "location": "../data/89/89a650142738208cea5630f207a1077dd75fcdfc",
+        "size": 102,
+        "basename": "test_pandas.py",
+        "nameroot": "test_pandas",
+        "nameext": ".py",
+        "checksum": "sha1$89a650142738208cea5630f207a1077dd75fcdfc",
+        "@id": "urn:uuid:d933031e-98f7-4d3a-b261-488c6a9f90b5"
+    }
+}

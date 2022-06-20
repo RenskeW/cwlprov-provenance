@@ -1,0 +1,37 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,4f8d55e1-ab2d-4013-8d30-809488477d5e/>
+  prefix metadata <arcp://uuid,4f8d55e1-ab2d-4013-8d30-809488477d5e/metadata/>
+  prefix provenance <arcp://uuid,4f8d55e1-ab2d-4013-8d30-809488477d5e/metadata/provenance/>
+  prefix wf <arcp://uuid,4f8d55e1-ab2d-4013-8d30-809488477d5e/workflow/packed.cwl#>
+  prefix input <arcp://uuid,4f8d55e1-ab2d-4013-8d30-809488477d5e/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:83d3db9f-3559-4b5f-8c4e-ca24404ae851)
+  agent(id:9200e211-2b21-4a91-86eb-48f357222502, [prov:type='prov:SoftwareAgent', prov:type='wfprov:WorkflowEngine', prov:label="cwltool 3.1.20220607081835"])
+  wasStartedBy(id:9200e211-2b21-4a91-86eb-48f357222502, -, id:83d3db9f-3559-4b5f-8c4e-ca24404ae851, 2022-06-19T20:36:19.731010)
+  activity(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, 2022-06-19T20:36:19.731079, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, id:9200e211-2b21-4a91-86eb-48f357222502, wf:main)
+  wasStartedBy(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, -, id:9200e211-2b21-4a91-86eb-48f357222502, 2022-06-19T20:36:19.731226)
+  entity(wf:main, [prov:type='wfdesc:Process', prov:type='prov:Plan', prov:label="Prospective provenance"])
+  entity(data:ed84e7cdb26d2cbf2350d01e20304e48ea02158f, [prov:type='wfprov:Artifact'])
+  entity(id:7a4e4832-c04a-4252-99f0-ab630a76c435, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="test_python.py", cwlprov:nameroot="test_python", cwlprov:nameext=".py"])
+  specializationOf(id:7a4e4832-c04a-4252-99f0-ab630a76c435, data:ed84e7cdb26d2cbf2350d01e20304e48ea02158f)
+  used(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, id:7a4e4832-c04a-4252-99f0-ab630a76c435, 2022-06-19T20:36:19.742268, [prov:role='wf:main/script'])
+  agent(id:8827197c-b9da-40de-a393-c676f41e8fc1, [prov:type='prov:SoftwareAgent', cwlprov:image="python_image:3.9", prov:label="Container execution of image python_image:3.9"])
+  wasAssociatedWith(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, id:8827197c-b9da-40de-a393-c676f41e8fc1, -)
+  entity(data:ed84e7cdb26d2cbf2350d01e20304e48ea02158f, [prov:type='wfprov:Artifact'])
+  entity(id:7d6d4be0-bb58-4266-a044-39b51bd64bf0, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="test_python.py", cwlprov:nameroot="test_python", cwlprov:nameext=".py"])
+  specializationOf(id:7d6d4be0-bb58-4266-a044-39b51bd64bf0, data:ed84e7cdb26d2cbf2350d01e20304e48ea02158f)
+  used(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, id:7d6d4be0-bb58-4266-a044-39b51bd64bf0, 2022-06-19T20:36:28.908062, [prov:role='wf:main/docker_file.cwl/script'])
+  wasEndedBy(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, -, id:4f8d55e1-ab2d-4013-8d30-809488477d5e, 2022-06-19T20:36:32.508523)
+  wasEndedBy(id:4f8d55e1-ab2d-4013-8d30-809488477d5e, -, id:9200e211-2b21-4a91-86eb-48f357222502, 2022-06-19T20:36:32.511577)
+endDocument

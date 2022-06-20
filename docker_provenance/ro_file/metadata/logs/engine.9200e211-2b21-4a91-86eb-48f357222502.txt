@@ -1,0 +1,23 @@
+[2022-06-19T18:36:14,561.338186Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ./ro_file docker_file.cwl
+[2022-06-19T18:36:14,569.977999Z] Resolved 'docker_file.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/docker_file.cwl'
+[2022-06-19T18:36:20,358.894110Z] ['docker', 'build', '--tag=python_image:3.9', '/private/tmp/docker_tmp_ovjpuz4']
+[2022-06-19T18:36:28,864.490032Z] [job docker_file.cwl] /private/tmp/docker_tmpsimjnm88$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmpsimjnm88,target=/sGuTJY \
+    --mount=type=bind,source=/private/tmp/docker_tmpq0etiagh,target=/tmp \
+    --mount=type=bind,source=/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/test_python.py,target=/var/lib/cwl/stgbf54a983-ab9c-4052-ab1f-563b48458b64/test_python.py,readonly \
+    --workdir=/sGuTJY \
+    --read-only=true \
+    --net=none \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmpmqekkytq/20220619203628-862031.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/sGuTJY \
+    python_image:3.9 \
+    python3 \
+    /var/lib/cwl/stgbf54a983-ab9c-4052-ab1f-563b48458b64/test_python.py
+[2022-06-19T18:36:32,504.911184Z] [job docker_file.cwl] Max memory used: 0MiB
+[2022-06-19T18:36:32,509.238958Z] [job docker_file.cwl] completed success
+[2022-06-19T18:36:32,720.662117Z] Final process status is success

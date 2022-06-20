@@ -1,0 +1,12 @@
+{
+    "script": {
+        "class": "File",
+        "location": "../data/ed/ed84e7cdb26d2cbf2350d01e20304e48ea02158f",
+        "size": 80,
+        "basename": "test_python.py",
+        "nameroot": "test_python",
+        "nameext": ".py",
+        "checksum": "sha1$ed84e7cdb26d2cbf2350d01e20304e48ea02158f",
+        "@id": "urn:uuid:7a4e4832-c04a-4252-99f0-ab630a76c435"
+    }
+}

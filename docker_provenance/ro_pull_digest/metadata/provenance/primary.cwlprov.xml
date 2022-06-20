@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:wfprov="http://purl.org/wf4ever/wfprov#" xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#" xmlns:cwlprov="https://w3id.org/cwl/prov#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:schema="http://schema.org/" xmlns:orcid="https://orcid.org/" xmlns:id="urn:uuid:" xmlns:data="urn:hash::sha1:" xmlns:sha256="nih:sha-256;" xmlns:researchobject="arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/" xmlns:metadata="arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/metadata/" xmlns:provenance="arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/metadata/provenance/" xmlns:wf="arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#" xmlns:input="arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/primary-job.json#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="id:8b19efea-77bf-41db-ad3f-95a6beeac76a"/>
+  <prov:softwareAgent prov:id="id:797ede1c-86a5-4618-b371-78d81e7fbdc1">
+    <prov:label>cwltool 3.1.20220607081835</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowEngine</prov:type>
+  </prov:softwareAgent>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:797ede1c-86a5-4618-b371-78d81e7fbdc1"/>
+    <prov:starter prov:ref="id:8b19efea-77bf-41db-ad3f-95a6beeac76a"/>
+    <prov:time>2022-06-19T21:10:57.322800</prov:time>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="id:e02f455e-97f1-4425-8bd6-06da5be85583">
+    <prov:startTime>2022-06-19T21:10:57.322866</prov:startTime>
+    <prov:label>Run of workflow/packed.cwl#main</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:agent prov:ref="id:797ede1c-86a5-4618-b371-78d81e7fbdc1"/>
+    <prov:plan prov:ref="wf:main"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:starter prov:ref="id:797ede1c-86a5-4618-b371-78d81e7fbdc1"/>
+    <prov:time>2022-06-19T21:10:57.323008</prov:time>
+  </prov:wasStartedBy>
+  <prov:plan prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <prov:type xsi:type="xsd:QName">wfdesc:Process</prov:type>
+  </prov:plan>
+  <prov:entity prov:id="data:7b502c3a1f48c8609ae212cdfb639dee39673f5e">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">Hello world</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:entity prov:ref="data:7b502c3a1f48c8609ae212cdfb639dee39673f5e"/>
+    <prov:time>2022-06-19T21:10:57.328540</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/message</prov:role>
+  </prov:used>
+  <prov:softwareAgent prov:id="id:9ae433c7-4800-437e-bab1-8f441c56f09d">
+    <prov:label>Container execution of image debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b</prov:label>
+    <cwlprov:image>debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b</cwlprov:image>
+  </prov:softwareAgent>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:agent prov:ref="id:9ae433c7-4800-437e-bab1-8f441c56f09d"/>
+  </prov:wasAssociatedWith>
+  <prov:entity prov:id="data:7b502c3a1f48c8609ae212cdfb639dee39673f5e">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">Hello world</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:entity prov:ref="data:7b502c3a1f48c8609ae212cdfb639dee39673f5e"/>
+    <prov:time>2022-06-19T21:10:59.480041</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/docker_pull_digest.cwl/message</prov:role>
+  </prov:used>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:ender prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:time>2022-06-19T21:11:01.584782</prov:time>
+  </prov:wasEndedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:e02f455e-97f1-4425-8bd6-06da5be85583"/>
+    <prov:ender prov:ref="id:797ede1c-86a5-4618-b371-78d81e7fbdc1"/>
+    <prov:time>2022-06-19T21:11:01.588218</prov:time>
+  </prov:wasEndedBy>
+</prov:document>

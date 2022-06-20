@@ -1,0 +1,22 @@
+[2022-06-19T19:10:52,791.469097Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ./ro_pull_digest docker_pull_digest.cwl
+[2022-06-19T19:10:52,813.961029Z] Resolved 'docker_pull_digest.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/docker_pull_digest.cwl'
+[2022-06-19T19:10:57,808.755875Z] ['docker', 'pull', 'debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b']
+[2022-06-19T19:10:59,474.169016Z] [job docker_pull_digest.cwl] /private/tmp/docker_tmpnrdk4pnb$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmpnrdk4pnb,target=/HcFoIU \
+    --mount=type=bind,source=/private/tmp/docker_tmp0a1gfm7u,target=/tmp \
+    --workdir=/HcFoIU \
+    --read-only=true \
+    --net=none \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmpww1n9nf6/20220619211059-473069.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/HcFoIU \
+    debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b \
+    echo \
+    'Hello world'
+[2022-06-19T19:11:01,579.918146Z] [job docker_pull_digest.cwl] Max memory used: 0MiB
+[2022-06-19T19:11:01,585.455179Z] [job docker_pull_digest.cwl] completed success
+[2022-06-19T19:11:01,795.073986Z] Final process status is success

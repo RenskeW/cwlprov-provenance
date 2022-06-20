@@ -1,0 +1,52 @@
+_:Nc0c93faff65f41a0997b06625bfb16d3 <http://www.w3.org/ns/prov#hadActivity> <urn:uuid:8b19efea-77bf-41db-ad3f-95a6beeac76a> .
+<urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> <http://www.w3.org/2000/01/rdf-schema#label> "cwltool 3.1.20220607081835"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Nd5d2ff09a23c44758c98ef5ae3cebd73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Association> .
+_:N84021b1b210d4d048645f250e556a5cb <http://www.w3.org/ns/prov#hadRole> <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main/docker_pull_digest.cwl/message> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#wasAssociatedWith> <urn:uuid:9ae433c7-4800-437e-bab1-8f441c56f09d> .
+<urn:hash::sha1:7b502c3a1f48c8609ae212cdfb639dee39673f5e> <http://www.w3.org/ns/prov#value> "Hello world"^^<http://www.w3.org/2001/XMLSchema#string> .
+<urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<urn:uuid:9ae433c7-4800-437e-bab1-8f441c56f09d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Plan> .
+<urn:uuid:9ae433c7-4800-437e-bab1-8f441c56f09d> <https://w3id.org/cwl/prov#image> "debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Ndacd0786bd8b49c696e43b4115db6d70 <http://www.w3.org/ns/prov#hadRole> <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main/message> .
+_:N275b87ba67f64a05888781d21e6ec1cc <http://www.w3.org/ns/prov#hadActivity> <urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> .
+_:N5e71a943b2f24dceb20380a0f28eb999 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#End> .
+_:Nd5d2ff09a23c44758c98ef5ae3cebd73 <http://www.w3.org/ns/prov#hadPlan> <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main> .
+<urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#SoftwareAgent> .
+_:N5e71a943b2f24dceb20380a0f28eb999 <http://www.w3.org/ns/prov#hadActivity> <urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedStart> _:N25da81a7c4c44c92965f99bd7e1f4965 .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#wasAssociatedWith> <urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> .
+_:Ndacd0786bd8b49c696e43b4115db6d70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+_:N25da81a7c4c44c92965f99bd7e1f4965 <http://www.w3.org/ns/prov#hadActivity> <urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> .
+<urn:uuid:9ae433c7-4800-437e-bab1-8f441c56f09d> <http://www.w3.org/2000/01/rdf-schema#label> "Container execution of image debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:Nc0c93faff65f41a0997b06625bfb16d3 <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:10:57.322800"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:N84021b1b210d4d048645f250e556a5cb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedAssociation> _:Nd5d2ff09a23c44758c98ef5ae3cebd73 .
+<urn:hash::sha1:7b502c3a1f48c8609ae212cdfb639dee39673f5e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Entity> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/2000/01/rdf-schema#label> "Run of workflow/packed.cwl#main"^^<http://www.w3.org/2001/XMLSchema#string> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedEnd> _:N275b87ba67f64a05888781d21e6ec1cc .
+<urn:uuid:9ae433c7-4800-437e-bab1-8f441c56f09d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedUsage> _:Ndacd0786bd8b49c696e43b4115db6d70 .
+_:N5e71a943b2f24dceb20380a0f28eb999 <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:11:01.588218"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> <http://www.w3.org/ns/prov#qualifiedStart> _:Nc0c93faff65f41a0997b06625bfb16d3 .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedEnd> _:N5e71a943b2f24dceb20380a0f28eb999 .
+<urn:hash::sha1:7b502c3a1f48c8609ae212cdfb639dee39673f5e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/wf4ever/wfprov#Artifact> .
+_:N84021b1b210d4d048645f250e556a5cb <http://www.w3.org/ns/prov#entity> <urn:hash::sha1:7b502c3a1f48c8609ae212cdfb639dee39673f5e> .
+_:N25da81a7c4c44c92965f99bd7e1f4965 <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:10:57.323008"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:N25da81a7c4c44c92965f99bd7e1f4965 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Start> .
+<urn:uuid:8b19efea-77bf-41db-ad3f-95a6beeac76a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#qualifiedUsage> _:N84021b1b210d4d048645f250e556a5cb .
+_:N84021b1b210d4d048645f250e556a5cb <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:10:59.480041"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:Ndacd0786bd8b49c696e43b4115db6d70 <http://www.w3.org/ns/prov#entity> <urn:hash::sha1:7b502c3a1f48c8609ae212cdfb639dee39673f5e> .
+_:Nc0c93faff65f41a0997b06625bfb16d3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Start> .
+<arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Entity> .
+_:N275b87ba67f64a05888781d21e6ec1cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#End> .
+_:Ndacd0786bd8b49c696e43b4115db6d70 <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:10:57.328540"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:N275b87ba67f64a05888781d21e6ec1cc <http://www.w3.org/ns/prov#atTime> "2022-06-19T21:11:01.584782"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<urn:uuid:797ede1c-86a5-4618-b371-78d81e7fbdc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/wf4ever/wfprov#WorkflowEngine> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/wf4ever/wfprov#WorkflowRun> .
+<arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/wf4ever/wfdesc#Process> .
+<arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#main> <http://www.w3.org/2000/01/rdf-schema#label> "Prospective provenance"^^<http://www.w3.org/2001/XMLSchema#string> .
+<urn:uuid:e02f455e-97f1-4425-8bd6-06da5be85583> <http://www.w3.org/ns/prov#startedAtTime> "2022-06-19T21:10:57.322866"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+

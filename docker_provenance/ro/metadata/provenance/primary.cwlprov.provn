@@ -1,0 +1,37 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c/>
+  prefix metadata <arcp://uuid,8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c/metadata/>
+  prefix provenance <arcp://uuid,8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c/metadata/provenance/>
+  prefix wf <arcp://uuid,8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c/workflow/packed.cwl#>
+  prefix input <arcp://uuid,8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:b59fc183-bad5-4cc3-93ac-895aa0ebbcb4)
+  agent(id:f8427b9a-fbdc-4757-8a89-8510dc6705d5, [prov:type='prov:SoftwareAgent', prov:type='wfprov:WorkflowEngine', prov:label="cwltool 3.1.20220502060230"])
+  wasStartedBy(id:f8427b9a-fbdc-4757-8a89-8510dc6705d5, -, id:b59fc183-bad5-4cc3-93ac-895aa0ebbcb4, 2022-05-30T12:23:16.523971)
+  activity(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, 2022-05-30T12:23:16.524045, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, id:f8427b9a-fbdc-4757-8a89-8510dc6705d5, wf:main)
+  wasStartedBy(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, -, id:f8427b9a-fbdc-4757-8a89-8510dc6705d5, 2022-05-30T12:23:16.524171)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Process', prov:label="Prospective provenance"])
+  entity(data:89a650142738208cea5630f207a1077dd75fcdfc, [prov:type='wfprov:Artifact'])
+  entity(id:f8259633-2744-4dba-a5c8-eae0e1ae19b9, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="test.py", cwlprov:nameroot="test", cwlprov:nameext=".py"])
+  specializationOf(id:f8259633-2744-4dba-a5c8-eae0e1ae19b9, data:89a650142738208cea5630f207a1077dd75fcdfc)
+  used(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, id:f8259633-2744-4dba-a5c8-eae0e1ae19b9, 2022-05-30T12:23:16.531145, [prov:role='wf:main/script'])
+  agent(id:d789e2c9-93ba-4d4f-8868-895948404d3e, [prov:type='prov:SoftwareAgent', cwlprov:image="amancevice/pandas:1.3.4-slim", prov:label="Container execution of image amancevice/pandas:1.3.4-slim"])
+  wasAssociatedWith(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, id:d789e2c9-93ba-4d4f-8868-895948404d3e, -)
+  entity(data:89a650142738208cea5630f207a1077dd75fcdfc, [prov:type='wfprov:Artifact'])
+  entity(id:f9bb79e7-08d1-4d76-b327-6b94caed163b, [prov:type='wf4ever:File', prov:type='wfprov:Artifact', cwlprov:basename="test.py", cwlprov:nameroot="test", cwlprov:nameext=".py"])
+  specializationOf(id:f9bb79e7-08d1-4d76-b327-6b94caed163b, data:89a650142738208cea5630f207a1077dd75fcdfc)
+  used(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, id:f9bb79e7-08d1-4d76-b327-6b94caed163b, 2022-05-30T12:23:16.972872, [prov:role='wf:main/test_docker_provenance.cwl/script'])
+  wasEndedBy(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, -, id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, 2022-05-30T12:23:20.905180)
+  wasEndedBy(id:8f5ebe5e-cd2e-4b51-8d5d-f758ddeb014c, -, id:f8427b9a-fbdc-4757-8a89-8510dc6705d5, 2022-05-30T12:23:20.907481)
+endDocument

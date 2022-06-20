@@ -1,0 +1,32 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/>
+  prefix metadata <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/metadata/>
+  prefix provenance <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/metadata/provenance/>
+  prefix wf <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/packed.cwl#>
+  prefix input <arcp://uuid,e02f455e-97f1-4425-8bd6-06da5be85583/workflow/primary-job.json#>
+  
+  agent(id:8b19efea-77bf-41db-ad3f-95a6beeac76a)
+  agent(id:797ede1c-86a5-4618-b371-78d81e7fbdc1, [prov:type='prov:SoftwareAgent', prov:type='wfprov:WorkflowEngine', prov:label="cwltool 3.1.20220607081835"])
+  wasStartedBy(id:797ede1c-86a5-4618-b371-78d81e7fbdc1, -, id:8b19efea-77bf-41db-ad3f-95a6beeac76a, 2022-06-19T21:10:57.322800)
+  activity(id:e02f455e-97f1-4425-8bd6-06da5be85583, 2022-06-19T21:10:57.322866, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:e02f455e-97f1-4425-8bd6-06da5be85583, id:797ede1c-86a5-4618-b371-78d81e7fbdc1, wf:main)
+  wasStartedBy(id:e02f455e-97f1-4425-8bd6-06da5be85583, -, id:797ede1c-86a5-4618-b371-78d81e7fbdc1, 2022-06-19T21:10:57.323008)
+  entity(wf:main, [prov:type='wfdesc:Process', prov:type='prov:Plan', prov:label="Prospective provenance"])
+  entity(data:7b502c3a1f48c8609ae212cdfb639dee39673f5e, [prov:type='wfprov:Artifact', prov:value="Hello world"])
+  used(id:e02f455e-97f1-4425-8bd6-06da5be85583, data:7b502c3a1f48c8609ae212cdfb639dee39673f5e, 2022-06-19T21:10:57.328540, [prov:role='wf:main/message'])
+  agent(id:9ae433c7-4800-437e-bab1-8f441c56f09d, [prov:type='prov:SoftwareAgent', cwlprov:image="debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b", prov:label="Container execution of image debian:stable-slim@sha256:bfe148bd4647169a5597ac5e975ecd7809619ccda32b2b8eb909f05eeb14405b"])
+  wasAssociatedWith(id:e02f455e-97f1-4425-8bd6-06da5be85583, id:9ae433c7-4800-437e-bab1-8f441c56f09d, -)
+  entity(data:7b502c3a1f48c8609ae212cdfb639dee39673f5e, [prov:type='wfprov:Artifact', prov:value="Hello world"])
+  used(id:e02f455e-97f1-4425-8bd6-06da5be85583, data:7b502c3a1f48c8609ae212cdfb639dee39673f5e, 2022-06-19T21:10:59.480041, [prov:role='wf:main/docker_pull_digest.cwl/message'])
+  wasEndedBy(id:e02f455e-97f1-4425-8bd6-06da5be85583, -, id:e02f455e-97f1-4425-8bd6-06da5be85583, 2022-06-19T21:11:01.584782)
+  wasEndedBy(id:e02f455e-97f1-4425-8bd6-06da5be85583, -, id:797ede1c-86a5-4618-b371-78d81e7fbdc1, 2022-06-19T21:11:01.588218)
+endDocument

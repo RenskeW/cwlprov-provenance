@@ -1,0 +1,22 @@
+[2022-06-19T18:43:15,632.301092Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ./ro_pull docker_pull.cwl
+[2022-06-19T18:43:15,649.436951Z] Resolved 'docker_pull.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/docker_pull.cwl'
+[2022-06-19T18:43:22,150.000095Z] [job docker_pull.cwl] /private/tmp/docker_tmpsgy09x05$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmpsgy09x05,target=/IZJAkY \
+    --mount=type=bind,source=/private/tmp/docker_tmp79er2w08,target=/tmp \
+    --mount=type=bind,source=/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/docker_provenance/test_pandas.py,target=/var/lib/cwl/stge749a308-a0f9-4c28-a748-0176eb978a38/test_pandas.py,readonly \
+    --workdir=/IZJAkY \
+    --read-only=true \
+    --net=none \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmpi8powf50/20220619204322-149068.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/IZJAkY \
+    amancevice/pandas:1.3.4-slim \
+    python3 \
+    /var/lib/cwl/stge749a308-a0f9-4c28-a748-0176eb978a38/test_pandas.py
+[2022-06-19T18:43:27,50.024033Z] [job docker_pull.cwl] Max memory used: 52MiB
+[2022-06-19T18:43:27,53.795099Z] [job docker_pull.cwl] completed success
+[2022-06-19T18:43:27,236.380816Z] Final process status is success
