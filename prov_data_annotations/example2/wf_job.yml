@@ -1,0 +1,28 @@
+sabdab_file:
+  class: File
+  location: ./data/sabdab_summary_all_20220527.tsv
+  format: https://www.iana.org/assignments/media-types/text/tab-separated-values
+  s:Dataset:
+    s:dateCreated: 2022-05-27 # download date
+    s:includedInDataRepository: 
+      s:identifier: https://bio.tools/sabdab # SAbDab
+
+pdb_dir:
+  class: Directory
+  location: ./data/pdb_directory
+  format: http://edamontology.org/format_1477 # mmCIF
+  s:Dataset:
+    s:dateCreated: 2022-06-22 # download date
+    s:includedInDataRepository:
+      s:identifier: https://bio.tools/pdb # Protein Data Bank
+    s:hasPart:
+    - s:identifier: http://doi.org/10.2210/pdb1KIP/pdb
+      s:version: 1.2
+    - s:identifier: http://doi.org/10.2210/pdb1AHW/pdb
+      s:version: 1.2
+
+$namespaces:
+  s: http://schema.org/
+
+$schemas:
+- https://schema.org/version/latest/schemaorg-current-https.rdf

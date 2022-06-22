@@ -1,0 +1,20 @@
+[2022-06-22T10:27:30,937.797070Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance ro_old --full-name Renske de Wit wf.cwl wf_job.yml
+[2022-06-22T10:27:31,26.345968Z] Resolved 'wf.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/wf.cwl'
+[2022-06-22T10:27:46,388.679981Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/data/sabdab_summary_all_20220527.tsv
+[2022-06-22T10:27:46,585.876942Z] [workflow ] start
+[2022-06-22T10:27:46,633.225918Z] [workflow ] starting step echo_step
+[2022-06-22T10:27:46,635.885000Z] [step echo_step] start
+[2022-06-22T10:27:46,798.181057Z] [job echo_step] /private/tmp/docker_tmpqic_4ox6$ echo \
+    /private/tmp/docker_tmp79yi6ln6/stge31ea56e-fb9f-4b9e-8b0d-8519e30361ed/sabdab_summary_all_20220527.tsv \
+    /private/tmp/docker_tmp79yi6ln6/stge6d06dc4-d5bd-49d3-b548-f5d10bca3020/pdb_directory
+[2022-06-22T10:27:46,901.896000Z] [job echo_step] completed success
+[2022-06-22T10:27:46,902.708054Z] [step echo_step] completed success
+[2022-06-22T10:27:46,906.655073Z] [workflow ] starting step date_step
+[2022-06-22T10:27:46,907.136917Z] [step date_step] start
+[2022-06-22T10:27:46,918.366909Z] [job date_step] /private/tmp/docker_tmpnpu4ppn7$ date \
+    -r \
+    /private/tmp/docker_tmpk0o7r70f/stga6fda5a6-0a24-4222-8530-7b375dacafc4/sabdab_summary_all_20220527.tsv
+[2022-06-22T10:27:46,981.549025Z] [job date_step] completed success
+[2022-06-22T10:27:46,982.460022Z] [step date_step] completed success
+[2022-06-22T10:27:46,982.742071Z] [workflow ] completed success
+[2022-06-22T10:27:47,855.687857Z] Final process status is success
