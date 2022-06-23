@@ -1,0 +1,20 @@
+[2022-06-23T10:01:36,595.513105Z] [cwltool] /Users/renskedewit/Documents/GitHub/cwltool/cwltool/__main__.py --provenance /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/ro_new --full-name Renske de Wit /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/wf.cwl /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/wf_job.yml
+[2022-06-23T10:01:36,728.710890Z] Resolved '/Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/wf.cwl' to 'file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/wf.cwl'
+[2022-06-23T10:02:37,444.729090Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/prov_data_annotations/example2/data/sabdab_summary_all_20220527.tsv
+[2022-06-23T10:02:37,678.630829Z] [workflow ] start
+[2022-06-23T10:02:37,682.497978Z] [workflow ] starting step date_step
+[2022-06-23T10:02:37,683.433056Z] [step date_step] start
+[2022-06-23T10:02:37,712.528944Z] [job date_step] /private/tmp/docker_tmpeu275qx7$ date \
+    -r \
+    /private/tmp/docker_tmpt1m7gg7b/stg90a37110-5b6c-4413-b556-bd16cbe8bab9/sabdab_summary_all_20220527.tsv
+[2022-06-23T10:02:37,780.086994Z] [job date_step] completed success
+[2022-06-23T10:02:37,783.335924Z] [step date_step] completed success
+[2022-06-23T10:02:37,814.080000Z] [workflow ] starting step echo_step
+[2022-06-23T10:02:37,816.550970Z] [step echo_step] start
+[2022-06-23T10:02:37,854.929924Z] [job echo_step] /private/tmp/docker_tmp3xa06l6a$ echo \
+    /private/tmp/docker_tmphtl7vgxt/stgf7775b7d-d569-4403-982b-61d97f36041a/sabdab_summary_all_20220527.tsv \
+    /private/tmp/docker_tmphtl7vgxt/stgca7553d5-f947-43fe-9401-a9b890f04d50/pdb_directory
+[2022-06-23T10:02:37,945.160866Z] [job echo_step] completed success
+[2022-06-23T10:02:37,950.139999Z] [step echo_step] completed success
+[2022-06-23T10:02:37,953.046083Z] [workflow ] completed success
+[2022-06-23T10:02:39,161.000013Z] Final process status is success

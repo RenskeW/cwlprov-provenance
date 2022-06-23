@@ -1,7 +1,7 @@
 Bag-Software-Agent: cwltool 3.1.20220315080210
 BagIt-Profile-Identifier: https://w3id.org/ro/bagit/profile
-Bagging-Date: 2022-06-22
+Bagging-Date: 2022-06-23
 External-Description: Research Object of CWL workflow run
 Contact-Name: Renske de Wit
-External-Identifier: arcp://uuid,8f2d6010-454f-44b8-b077-4e01e9522c73/
+External-Identifier: arcp://uuid,836a3856-9b0b-43d3-905e-ca0efb556da5/
 Payload-Oxum: 5879594.3

@@ -4,22 +4,48 @@ sabdab_file:
   format: https://www.iana.org/assignments/media-types/text/tab-separated-values
   s:Dataset:
     s:dateCreated: 2022-05-27 # download date
-    s:includedInDataRepository: 
+    s:includedInDataCatalog: 
       s:identifier: https://bio.tools/sabdab # SAbDab
+    s:potentialAction: # Dataset was result of a search action
+      s:query: "All structures"
 
 pdb_dir:
   class: Directory
   location: ./data/pdb_directory
-  format: http://edamontology.org/format_1477 # mmCIF
   s:Dataset:
     s:dateCreated: 2022-06-22 # download date
-    s:includedInDataRepository:
-      s:identifier: https://bio.tools/pdb # Protein Data Bank
+    s:potentialAction:
+      s:query: "Structures deposited between 2012-2014"
+      s:object:
+        s:identifier: https://bio.tools/pdb # alternative method to specify database
     s:hasPart:
     - s:identifier: http://doi.org/10.2210/pdb1KIP/pdb
       s:version: 1.2
+      s:encodingFormat: http://edamontology.org/format_1477 # mmCIF
     - s:identifier: http://doi.org/10.2210/pdb1AHW/pdb
       s:version: 1.2
+      s:encodingFormat: http://edamontology.org/format_1477
+
+pdb_array:
+  - class: File
+    location: ./data/7mb7.cif
+    format: http://edamontology.org/format_1477 # mmCIF
+    s:isPartOf:
+      s:identifier: https://bio.tools/pdb
+    s:identifier: http://doi.org/10.2210/pdb7MB7/pdb
+    s:version: 1.0
+    s:dateCreated: 2022-06-23 # The download date?
+  - class: File
+    location: ./data/7zxf.cif
+    format: http://edamontology.org/format_1477 # mmCIF
+    s:isPartOf: # here s:includedInDataCatalog is not appropriate because entity is not a Dataset
+      s:identifier: https://bio.tools/pdb
+    s:identifier: http://doi.org/10.2210/pdb7ZXF/pdb
+    s:version: 1.0
+    s:dateCreated: 2022-06-23 # the download date?
+  # how do we express queries/filtering/properties of the dataset as a whole?
+
+
 
 $namespaces:
   s: http://schema.org/
