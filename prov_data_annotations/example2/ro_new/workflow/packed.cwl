@@ -40,7 +40,19 @@
         },
         {
             "class": "Workflow",
+            "requirements": [
+                {
+                    "class": "ScatterFeatureRequirement"
+                }
+            ],
             "inputs": [
+                {
+                    "type": {
+                        "type": "array",
+                        "items": "File"
+                    },
+                    "id": "#main/pdb_array"
+                },
                 {
                     "type": "Directory",
                     "id": "#main/pdb_dir"
@@ -53,6 +65,19 @@
             ],
             "outputs": [],
             "steps": [
+                {
+                    "label": "Prints date of input files",
+                    "scatter": "#main/date2_step/file",
+                    "in": [
+                        {
+                            "source": "#main/pdb_array",
+                            "id": "#main/date2_step/file"
+                        }
+                    ],
+                    "out": [],
+                    "run": "#date.cwl",
+                    "id": "#main/date2_step"
+                },
                 {
                     "label": "Prints date of input file",
                     "in": [

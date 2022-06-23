@@ -5,8 +5,11 @@
         "format": "https://www.iana.org/assignments/media-types/text/tab-separated-values",
         "http://schema.org/Dataset": {
             "http://schema.org/dateCreated": "2022-05-27",
-            "http://schema.org/includedInDataRepository": {
+            "http://schema.org/includedInDataCatalog": {
                 "http://schema.org/identifier": "https://bio.tools/sabdab"
+            },
+            "http://schema.org/potentialAction": {
+                "http://schema.org/query": "All structures"
             }
         },
         "size": 4598025,
@@ -17,25 +20,63 @@
     },
     "pdb_dir": {
         "class": "Directory",
-        "format": "http://edamontology.org/format_1477",
         "http://schema.org/Dataset": {
-            "hasPart": [
+            "http://schema.org/dateCreated": "2022-06-22",
+            "http://schema.org/potentialAction": {
+                "http://schema.org/query": "Structures deposited between 2012-2014",
+                "http://schema.org/object": {
+                    "http://schema.org/identifier": "https://bio.tools/pdb"
+                }
+            },
+            "http://schema.org/hasPart": [
                 {
                     "http://schema.org/identifier": "http://doi.org/10.2210/pdb1KIP/pdb",
-                    "http://schema.org/version": 1.2
+                    "http://schema.org/version": 1.2,
+                    "http://schema.org/encodingFormat": "http://edamontology.org/format_1477"
                 },
                 {
                     "http://schema.org/identifier": "http://doi.org/10.2210/pdb1AHW/pdb",
-                    "http://schema.org/version": 1.2
+                    "http://schema.org/version": 1.2,
+                    "http://schema.org/encodingFormat": "http://edamontology.org/format_1477"
                 }
-            ],
-            "http://schema.org/dateCreated": "2022-06-22",
-            "http://schema.org/includedInDataRepository": {
-                "http://schema.org/identifier": "https://bio.tools/pdb"
-            }
+            ]
         },
         "basename": "pdb_directory"
     },
+    "pdb_array": [
+        {
+            "class": "File",
+            "location": "../data/4b/4b22356928446475c8ae5869968c9777374a76e8",
+            "format": "http://edamontology.org/format_1477",
+            "http://schema.org/isPartOf": {
+                "http://schema.org/identifier": "https://bio.tools/pdb"
+            },
+            "http://schema.org/identifier": "http://doi.org/10.2210/pdb7MB7/pdb",
+            "http://schema.org/version": 1.0,
+            "http://schema.org/dateCreated": "2022-06-23",
+            "size": 508297,
+            "basename": "7mb7.cif",
+            "nameroot": "7mb7",
+            "nameext": ".cif",
+            "checksum": "sha1$4b22356928446475c8ae5869968c9777374a76e8"
+        },
+        {
+            "class": "File",
+            "location": "../data/4e/4ebd7d222d9b6095fa96ee395905ce7f6d415381",
+            "format": "http://edamontology.org/format_1477",
+            "http://schema.org/isPartOf": {
+                "http://schema.org/identifier": "https://bio.tools/pdb"
+            },
+            "http://schema.org/identifier": "http://doi.org/10.2210/pdb7ZXF/pdb",
+            "http://schema.org/version": 1.0,
+            "http://schema.org/dateCreated": "2022-06-23",
+            "size": 1984391,
+            "basename": "7zxf.cif",
+            "nameroot": "7zxf",
+            "nameext": ".cif",
+            "checksum": "sha1$4ebd7d222d9b6095fa96ee395905ce7f6d415381"
+        }
+    ],
     "$namespaces": {
         "s": "http://schema.org/"
     },

@@ -3,5 +3,5 @@ BagIt-Profile-Identifier: https://w3id.org/ro/bagit/profile
 Bagging-Date: 2022-06-23
 External-Description: Research Object of CWL workflow run
 Contact-Name: Renske de Wit
-External-Identifier: arcp://uuid,836a3856-9b0b-43d3-905e-ca0efb556da5/
-Payload-Oxum: 5879594.3
+External-Identifier: arcp://uuid,b76c0304-7ed4-4c2b-ba65-4f53b7306eab/
+Payload-Oxum: 8372282.5
