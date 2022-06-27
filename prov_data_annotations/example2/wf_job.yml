@@ -1,3 +1,18 @@
+pdb_search:
+  s:SearchAction: # initial download from the PDB
+    s:query: "All structures"
+    s:object: 
+      s:identifier: https://bio.tools/pdb
+    s:date: 2022-05-27 # Query date
+    s:result: pdb_download
+
+pdb_filtering: # filtering of the initial download
+  s:Action:
+    s:object: pdb_download
+    s:instrument: "PISCES" # sequence similarity tool
+    s:about: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
+    s:result: pdb_array
+    
 sabdab_file:
   class: File
   location: ./data/sabdab_summary_all_20220527.tsv
@@ -6,18 +21,12 @@ sabdab_file:
     s:dateCreated: 2022-05-27 # download date
     s:includedInDataCatalog: 
       s:identifier: https://bio.tools/sabdab # SAbDab
-    s:potentialAction: # Dataset was result of a search action
-      s:query: "All structures"
 
 pdb_dir:
   class: Directory
   location: ./data/pdb_directory
   s:Dataset:
     s:dateCreated: 2022-06-22 # download date
-    s:potentialAction:
-      s:query: "Structures deposited between 2012-2014"
-      s:object:
-        s:identifier: https://bio.tools/pdb # alternative method to specify database
     s:hasPart:
     - s:identifier: http://doi.org/10.2210/pdb1KIP/pdb
       s:version: 1.2
@@ -43,8 +52,6 @@ pdb_array:
     s:identifier: http://doi.org/10.2210/pdb7ZXF/pdb
     s:version: 1.0
     s:dateCreated: 2022-06-23 # the download date?
-  # how do we express queries/filtering/properties of the dataset as a whole?
-
 
 
 $namespaces:
