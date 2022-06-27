@@ -1,0 +1,138 @@
+@prefix id: <urn:uuid:> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:06b68d76-e517-4ef5-a2df-cee1a8809197 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4w6w_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:e0976e22-7e08-4d6a-b77f-234caeaf7017 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:0aa4ec73-aa5b-4ad5-862b-516212055331 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2y5i_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:6c13a5b4-0ed3-4c58-b43a-cfb869c01cd2 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:0b542ec6-c422-4891-a3b8-961687446b52 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "6lfm_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:79ea3957-c3a9-46ff-9aea-35fbb2bfd7b5 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:18aa011d-2fdd-4119-b799-3e19d774979a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1mhp_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:e45f4095-8d92-4553-9f56-8e3cb22eb1ab ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:2a88cc5b-1139-4e9a-bbe6-63653d770945 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4l68_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:3ab1a358-297b-48a1-8f55-4adb70c423e9 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:361dd096-1435-4a7f-8014-0625fb71b87f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1aa3_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:66ac7331-f811-4335-a6e9-53fc8c1b27e8 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:3a4a6f84-5597-4276-bb08-b225fe722a61 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1a6c_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:16b16c11-3e3b-491f-aebb-259d8a2e658c ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:3e9cd818-1eb4-44ce-98c1-210606e73d5f a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "6wwz_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:cb46b1d8-3d11-4678-b204-6c7b8cb04869 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:5b3e7dc3-fdcb-4585-a681-c619f11874c8 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "3cai_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:1d28f348-11af-4e3b-9629-2971da5bee74 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:68bfb194-a824-4eb2-a44f-b823e943ecc1 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "5js9_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:fce06211-a554-4187-accd-2ea1c64aa14f ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:6a1fc513-07e2-43ba-aa75-8798e03f43e6 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "1a91_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:2df67fb9-c436-4e53-b0b8-aba9d5db643d ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:843638a0-16a1-450f-9efd-1ce3b49e5993 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4w6x_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:f00c2b70-3792-4f3b-898b-64848c75744c ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:b8013121-857e-4628-824a-a9e326cbc077 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2hkf_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:fc695327-a2b2-4a8d-bd7c-929e3682037e ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:c3332e8e-0740-46f4-a198-ca69a9d7a15b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4w6y_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:4cb73669-fa4d-407c-821f-9a8f0c7ccfbf ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:d440750c-91cf-4a54-9838-098160b6ae85 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "5g5x_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:fa296833-44f5-4423-8c5e-58aacc1e8d08 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:ebe67107-c418-47fc-aca9-6e5cbae88937 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "5g5r_RASA.csv"^^xsd:string ;
+    ore:proxyFor id:23997f4e-0fd7-4c09-8ec9-40b1651e4320 ;
+    ore:proxyIn id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 .
+
+id:aab1be37-e89b-4f14-87c6-9d99d2a362c9 a ro:Folder,
+        ore:Aggregation,
+        prov:Entity ;
+    ore:aggregates id:06b68d76-e517-4ef5-a2df-cee1a8809197,
+        id:0aa4ec73-aa5b-4ad5-862b-516212055331,
+        id:0b542ec6-c422-4891-a3b8-961687446b52,
+        id:18aa011d-2fdd-4119-b799-3e19d774979a,
+        id:2a88cc5b-1139-4e9a-bbe6-63653d770945,
+        id:361dd096-1435-4a7f-8014-0625fb71b87f,
+        id:3a4a6f84-5597-4276-bb08-b225fe722a61,
+        id:3e9cd818-1eb4-44ce-98c1-210606e73d5f,
+        id:5b3e7dc3-fdcb-4585-a681-c619f11874c8,
+        id:68bfb194-a824-4eb2-a44f-b823e943ecc1,
+        id:6a1fc513-07e2-43ba-aa75-8798e03f43e6,
+        id:843638a0-16a1-450f-9efd-1ce3b49e5993,
+        id:b8013121-857e-4628-824a-a9e326cbc077,
+        id:c3332e8e-0740-46f4-a198-ca69a9d7a15b,
+        id:d440750c-91cf-4a54-9838-098160b6ae85,
+        id:ebe67107-c418-47fc-aca9-6e5cbae88937 .
+

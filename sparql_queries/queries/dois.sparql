@@ -1,0 +1,7 @@
+PREFIX s: <http://schema.org/>
+
+SELECT ?doi
+WHERE {
+    ?aname s:identifier ?doi .
+}
+

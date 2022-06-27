@@ -1,0 +1,4 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+
+Renske a cwlprov:image .
+

@@ -1,0 +1,8 @@
+PREFIX s: <http://schema.org/>
+
+SELECT ?aname
+WHERE {
+    ?aname a s:Dataset .
+}
+
+

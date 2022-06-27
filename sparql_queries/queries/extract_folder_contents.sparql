@@ -1,0 +1,20 @@
+# Get the contents of a folder.
+
+PREFIX cwlprov: <https://w3id.org/cwl/prov#>
+PREFIX id: <urn:uuid:> 
+
+SELECT ?basename
+
+# folder_id is binded in Python
+WHERE {
+    ?folder_id prov:hadMember ?id .
+    ?id cwlprov:basename ?basename .
+
+}
+
+
+
+
+
+
+

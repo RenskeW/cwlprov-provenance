@@ -1,0 +1,11 @@
+PREFIX s: <http://schema.org/>
+PREFIX cwlprov: <https://w3id.org/cwl/prov#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?data_entity ?basename ?format
+
+WHERE {
+    ?data_entity s:encodingFormat ?format .
+    ?id prov:specializationOf ?data_entity .
+    ?id cwlprov:basename ?basename .
+}

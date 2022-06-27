@@ -1,0 +1,43 @@
+[2022-06-20T14:25:12,976.880074Z] [cwltool] /Users/renskedewit/opt/anaconda3/bin/cwltool --provenance /Users/renskedewit/Documents/Bioinformatics_Systems_Biology/CWLproject/cwlprov-provenance/sparql_queries/labels_wf_ro labels_wf.cwl ./tools/job_combine_labels.yml
+[2022-06-20T14:25:12,992.218971Z] Resolved 'labels_wf.cwl' to 'file:///Users/renskedewit/Documents/GitHub/cwl-epitope/labels_wf.cwl'
+[2022-06-20T14:25:53,710.037947Z] [provenance] Adding to RO file:///Users/renskedewit/Documents/GitHub/cwl-epitope/test.fasta
+[2022-06-20T14:25:54,376.467943Z] [workflow ] start
+[2022-06-20T14:25:54,380.436897Z] [workflow ] starting step combine_labels
+[2022-06-20T14:25:54,381.294012Z] [step combine_labels] start
+[2022-06-20T14:25:54,398.782015Z] [job combine_labels] /private/tmp/docker_tmpsa79l92m$ python3 \
+    /private/tmp/docker_tmp2u0y5cng/stg36a31803-ca36-44b7-8347-3cf7b5339d3a/combine_labels.py \
+    /private/tmp/docker_tmp2u0y5cng/stgaeb80bc7-5c69-4801-8393-64226024cc09/epitope_fasta \
+    /private/tmp/docker_tmp2u0y5cng/stg4652f368-c15a-4948-8ebc-ec1ad1e4a8a8/ppi_fasta \
+    /private/tmp/docker_tmp2u0y5cng/stg98fa4ed9-07d7-49d3-9444-6b3d5c46c277/dssp_output \
+    --outdir \
+    ./combined_labels
+[2022-06-20T14:26:06,374.373198Z] [job combine_labels] Max memory used: 9MiB
+[2022-06-20T14:26:06,626.425028Z] [job combine_labels] completed success
+[2022-06-20T14:26:06,637.145042Z] [step combine_labels] completed success
+[2022-06-20T14:26:06,653.616905Z] [workflow ] starting step generate_pc7
+[2022-06-20T14:26:06,656.569004Z] [step generate_pc7] start
+[2022-06-20T14:26:07,483.030081Z] [job generate_pc7] /private/tmp/docker_tmpcsu7x5xj$ docker \
+    run \
+    -i \
+    --mount=type=bind,source=/private/tmp/docker_tmpcsu7x5xj,target=/QObkox \
+    --mount=type=bind,source=/private/tmp/docker_tmpgz9a07st,target=/tmp \
+    --mount=type=bind,source=/Users/renskedewit/Documents/GitHub/cwl-epitope/test.fasta,target=/var/lib/cwl/stg2dc965f2-87cc-4f33-829d-e4b10908d073/test.fasta,readonly \
+    --mount=type=bind,source=/Users/renskedewit/Documents/GitHub/cwl-epitope/tools/get_pc7_inputs.py,target=/var/lib/cwl/stg3888b701-8d8d-452d-951d-f6b310ee14b1/get_pc7_inputs.py,readonly \
+    --workdir=/QObkox \
+    --read-only=true \
+    --user=501:20 \
+    --rm \
+    --cidfile=/private/tmp/docker_tmp3uue29h4/20220620162607-477027.cid \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/QObkox \
+    amancevice/pandas:1.3.4-slim \
+    python3 \
+    /var/lib/cwl/stg3888b701-8d8d-452d-951d-f6b310ee14b1/get_pc7_inputs.py \
+    /var/lib/cwl/stg2dc965f2-87cc-4f33-829d-e4b10908d073/test.fasta \
+    -o \
+    pc7_features
+[2022-06-20T14:26:18,825.653076Z] [job generate_pc7] Max memory used: 0MiB
+[2022-06-20T14:26:18,884.435892Z] [job generate_pc7] completed success
+[2022-06-20T14:26:18,885.031939Z] [step generate_pc7] completed success
+[2022-06-20T14:26:18,888.432980Z] [workflow ] completed success
+[2022-06-20T14:26:22,594.017982Z] Final process status is success

@@ -1,0 +1,50 @@
+@prefix id: <urn:uuid:> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ro: <http://purl.org/wf4ever/ro#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+id:203c898d-aba6-4b84-a1f4-683b3f2169e4 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4W6Y_A.fasta"^^xsd:string ;
+    ore:proxyFor id:41913a41-d3f7-4803-b876-ce2f44bdc235 ;
+    ore:proxyIn id:8d3d27ac-6696-458a-8c24-67bb67768ba1 .
+
+id:9e2753c4-0a9d-443e-8989-de470ad28c1c a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4W6W_A.fasta"^^xsd:string ;
+    ore:proxyFor id:be528228-32f4-4032-8ac6-51abf684ac14 ;
+    ore:proxyIn id:8d3d27ac-6696-458a-8c24-67bb67768ba1 .
+
+id:a0f57287-3dce-4e75-b7f6-10b9e01f6ec5 a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "4W6X_A.fasta"^^xsd:string ;
+    ore:proxyFor id:355f124d-8a59-42a9-96ad-48809007386f ;
+    ore:proxyIn id:8d3d27ac-6696-458a-8c24-67bb67768ba1 .
+
+id:ad71377a-6491-492d-b169-9a4c7483499a a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "2HKF_P.fasta"^^xsd:string ;
+    ore:proxyFor id:17f1b6b8-1a59-4db2-938c-fe266e13b326 ;
+    ore:proxyIn id:8d3d27ac-6696-458a-8c24-67bb67768ba1 .
+
+id:f0830d34-68c9-4ad1-b048-775bbcb1079b a ro:FolderEntry,
+        ore:Proxy,
+        prov:Entity ;
+    ro:entryName "6WWZ_C.fasta"^^xsd:string ;
+    ore:proxyFor id:4c796eb8-150b-4d61-9331-17abb31ee651 ;
+    ore:proxyIn id:8d3d27ac-6696-458a-8c24-67bb67768ba1 .
+
+id:8d3d27ac-6696-458a-8c24-67bb67768ba1 a ro:Folder,
+        ore:Aggregation,
+        prov:Entity ;
+    ore:aggregates id:203c898d-aba6-4b84-a1f4-683b3f2169e4,
+        id:9e2753c4-0a9d-443e-8989-de470ad28c1c,
+        id:a0f57287-3dce-4e75-b7f6-10b9e01f6ec5,
+        id:ad71377a-6491-492d-b169-9a4c7483499a,
+        id:f0830d34-68c9-4ad1-b048-775bbcb1079b .
+

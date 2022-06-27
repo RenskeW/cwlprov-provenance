@@ -1,0 +1,27 @@
+# Extract names of containers which were run in this workflow
+
+#PREFIX cwlprov: <https://w3id.org/cwl/prov#>
+
+#SELECT ?image
+
+#WHERE {
+#    ?id cwlprov:image ?image
+#}
+
+
+PREFIX cwlprov: <https://w3id.org/cwl/prov#>
+PREFIX wf: <arcp://uuid,a914217a-5cd2-457d-85cc-7472eeb17bfd/workflow/packed.cwl#>
+PREFIX wfdesc: <http://purl.org/wf4ever/wfdesc#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT ?step ?image
+
+WHERE {
+    wf:main a wfdesc:Workflow ;
+            wfdesc:hasSubProcess ?step .
+    ?step_execution prov:qualifiedAssociation ?association .
+    ?association prov:hadPlan ?step .
+    ?step_execution prov:wasAssociatedWith ?agent .
+    ?agent cwlprov:image ?image .
+}
+
