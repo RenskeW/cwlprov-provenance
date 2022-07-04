@@ -2,6 +2,11 @@
 
 This repository contains the results of several CWLProv-related experiments and their results.
 
+## cachedir_timestamps
+If workflow is previously run with `--cachedir` and later with `--provenance`, will the timestamps recorded in the RO correspond to the final execution time (when the cached results were used instead of rerunning the steps) or do they (as they should) represent the time of the execution when the results were cached?
+
+Answer: they do incorrectly represent to the final execution time.
+
 ## cwlviewer_colors
 Example workflow to test and enhance the `--print-dot` function of cwltool such that it distinguishes between components of class Operation (dashed), Workflow (orange) and CommandLineTool (yellow). See PR #...
 
