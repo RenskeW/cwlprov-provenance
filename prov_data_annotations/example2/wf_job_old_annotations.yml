@@ -1,0 +1,89 @@
+# cwlprov:prov:
+#   pdb_search:
+#     s:SearchAction: # initial download from the PDB
+#       s:query: "All structures"
+#       s:object: 
+#         s:identifier: https://bio.tools/pdb
+#       s:date: 2022-05-27 # Query date
+#       s:result: pdb_download
+
+#   pdb_filtering: # filtering of the initial download
+#     s:Action:
+#       s:object: pdb_download
+#       s:instrument: 
+#         s:identifier: https://bio.tools/pisces # PISCES, a sequence similarity tool
+#       s:about: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
+#       s:result: pdb_array
+  
+#   merge_action:
+#     s:Action:
+#       s:object:
+#       - dataset1:
+#           s:identifier: https://doi.org/zenodo.234231
+#       - dataset2:
+#           s:identifier: https://doi.org/zenodo.343512
+#       s:result: merged_dataset
+#       s:about: "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets"
+#       s:instrument: "pandas.DataFrame.join(dataset1, dataset2, how='inner')" # function/tool?
+  
+#   sabdab_search:
+#     s:SearchAction:
+#       s:object: https://bio.tools/sabdab # SAbDab
+#       s:query: "All structures"
+#       s:result: sabdab_raw
+  
+#   sabdab_processing:
+#     s:Action:
+#       s:about: "Processing of "
+    
+sabdab_file:
+  class: File
+  location: ./data/sabdab_summary_all_20220527.tsv
+  format: https://www.iana.org/assignments/media-types/text/tab-separated-values
+  s:additionalType: http://schema.org/Dataset # can only handle full URLs as values
+  s:dateCreated: 2022-05-27 # download date
+  s:includedInDataCatalog: 
+    s:identifier: https://bio.tools/sabdab # SAbDab
+
+pdb_dir:
+  class: Directory
+  location: ./data/pdb_directory
+  s:additionalType: https://schema.org/Dataset
+  s:dateCreated: 2022-06-22 # download date
+  s:includedInDataCatalog:
+    s:identifier: https://bio.tools/pdb
+  s:hasPart: # This part is not propagated 
+  - s:identifier: http://doi.org/10.2210/pdb1KIP/pdb
+    s:version: 1.2
+    s:encodingFormat: http://edamontology.org/format_1477 # mmCIF
+  - s:identifier: http://doi.org/10.2210/pdb1AHW/pdb
+    s:version: 1.2
+    s:encodingFormat: http://edamontology.org/format_1477
+
+pdb_array:
+  - class: File
+    location: ./data/7mb7.cif
+    format: http://edamontology.org/format_1477 # mmCIF
+    s:isPartOf:
+      s:identifier: https://bio.tools/pdb
+    s:identifier: http://doi.org/10.2210/pdb7MB7/pdb
+    s:version: 1.0
+    s:dateCreated: 2022-06-23 # The download date?
+  - class: File
+    location: ./data/7zxf.cif
+    format: http://edamontology.org/format_1477 # mmCIF
+    s:isPartOf: # here s:includedInDataCatalog is not appropriate because entity is not a Dataset
+      s:identifier: https://bio.tools/pdb
+    s:identifier: http://doi.org/10.2210/pdb7ZXF/pdb
+    s:version: 1.0
+    s:dateCreated: 2022-06-23 # the download date?
+
+merged_dataset:
+  class: File
+  location: ./data/merged.csv
+
+$namespaces:
+  s: https://schema.org/
+
+$schemas:
+- https://schema.org/version/latest/schemaorg-current-https.rdf
