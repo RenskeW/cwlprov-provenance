@@ -1,0 +1,76 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix id: <urn:uuid:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wf: <arcp://uuid,e085e59d-2bb0-499c-8dc9-4486f0189565/workflow/packed.cwl#> .
+@prefix wf4ever: <http://purl.org/wf4ever/wf4ever#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wf:main a wfdesc:Process,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string .
+
+id:201a24da-da68-42e4-ad0a-e48bf279bac0 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:89a650142738208cea5630f207a1077dd75fcdfc ;
+    cwlprov:basename "test_pandas.py"^^xsd:string ;
+    cwlprov:nameext ".py"^^xsd:string ;
+    cwlprov:nameroot "test_pandas"^^xsd:string .
+
+id:20b5ee0b-39ea-4909-acd2-d8ec58c9fa75 a prov:Agent .
+
+id:613f6ddc-a704-42f6-ace0-0f6fc7500fc0 a prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "Container execution of image amancevice/pandas:1.3.4-slim"^^xsd:string ;
+    cwlprov:image "amancevice/pandas:1.3.4-slim"^^xsd:string .
+
+id:d933031e-98f7-4d3a-b261-488c6a9f90b5 a wf4ever:File,
+        wfprov:Artifact,
+        prov:Entity ;
+    prov:specializationOf data:89a650142738208cea5630f207a1077dd75fcdfc ;
+    cwlprov:basename "test_pandas.py"^^xsd:string ;
+    cwlprov:nameext ".py"^^xsd:string ;
+    cwlprov:nameroot "test_pandas"^^xsd:string .
+
+id:e085e59d-2bb0-499c-8dc9-4486f0189565 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2022-06-19T20:43:27.055631"^^xsd:dateTime ;
+            prov:hadActivity id:f22844e5-1a2d-471d-92c4-aa0fa810bbe0 ],
+        [ a prov:End ;
+            prov:atTime "2022-06-19T20:43:27.053250"^^xsd:dateTime ;
+            prov:hadActivity id:e085e59d-2bb0-499c-8dc9-4486f0189565 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-06-19T20:43:21.533329"^^xsd:dateTime ;
+            prov:hadActivity id:f22844e5-1a2d-471d-92c4-aa0fa810bbe0 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2022-06-19T20:43:22.165785"^^xsd:dateTime ;
+            prov:entity id:201a24da-da68-42e4-ad0a-e48bf279bac0 ;
+            prov:hadRole <arcp://uuid,e085e59d-2bb0-499c-8dc9-4486f0189565/workflow/packed.cwl#main/docker_pull.cwl/script> ],
+        [ a prov:Usage ;
+            prov:atTime "2022-06-19T20:43:21.546450"^^xsd:dateTime ;
+            prov:entity id:d933031e-98f7-4d3a-b261-488c6a9f90b5 ;
+            prov:hadRole <arcp://uuid,e085e59d-2bb0-499c-8dc9-4486f0189565/workflow/packed.cwl#main/script> ] ;
+    prov:startedAtTime "2022-06-19T20:43:21.533203"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:613f6ddc-a704-42f6-ace0-0f6fc7500fc0,
+        id:f22844e5-1a2d-471d-92c4-aa0fa810bbe0 .
+
+data:89a650142738208cea5630f207a1077dd75fcdfc a wfprov:Artifact,
+        prov:Entity .
+
+id:f22844e5-1a2d-471d-92c4-aa0fa810bbe0 a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 3.1.20220607081835"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-06-19T20:43:21.533144"^^xsd:dateTime ;
+            prov:hadActivity id:20b5ee0b-39ea-4909-acd2-d8ec58c9fa75 ] .
+

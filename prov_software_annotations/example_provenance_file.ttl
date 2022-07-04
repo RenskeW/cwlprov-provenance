@@ -1,0 +1,115 @@
+# prefixes 
+...
+
+
+# Execution of the entire workflow 
+id:55f126cb-5fa9-46be-afd4-4e11b76bdab4 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2022-06-23T14:19:23.315273"^^xsd:dateTime ;
+            prov:hadActivity id:8f4ac682-b0b3-498a-adbd-a5598e303114 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-06-23T14:19:13.748088"^^xsd:dateTime ;
+            prov:hadActivity id:8f4ac682-b0b3-498a-adbd-a5598e303114 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2022-06-23T14:19:22.243270"^^xsd:dateTime ;
+            prov:entity id:2ff3d16b-d7c9-4edb-b194-bcfa92f9fa9b ;
+            prov:hadRole <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/pdb_array> ],
+        [ a prov:Usage ;
+            prov:atTime "2022-06-23T14:19:22.360422"^^xsd:dateTime ;
+            prov:entity id:45f07a34-8c88-4e6a-849d-103526f5bdcd ;
+            prov:hadRole <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/sabdab_file> ],
+        [ a prov:Usage ;
+            prov:atTime "2022-06-23T14:19:22.328918"^^xsd:dateTime ;
+            prov:entity id:5f14ed7c-d3ab-4f75-b4ac-60740451d931 ;
+            prov:hadRole <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/pdb_dir> ] ;
+    prov:startedAtTime "2022-06-23T14:19:13.747941"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:8f4ac682-b0b3-498a-adbd-a5598e303114 . # cwltool 
+
+# Execution of 1 step:
+id:521e7025-7b8a-4833-a7d4-4a12e3f7775a a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/date_step"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/date_step> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2022-06-23T14:19:22.914428"^^xsd:dateTime ;
+            prov:hadActivity id:55f126cb-5fa9-46be-afd4-4e11b76bdab4 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-06-23T14:19:22.760795"^^xsd:dateTime ;
+            prov:hadActivity id:55f126cb-5fa9-46be-afd4-4e11b76bdab4 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2022-06-23T14:19:22.798733"^^xsd:dateTime ;
+            prov:entity id:6b189810-6465-4a72-ad01-32695bd18122 ;
+            prov:hadRole <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/date_step/file> ] ;
+    prov:wasAssociatedWith id:8f4ac682-b0b3-498a-adbd-a5598e303114, # the workflow engine
+                           id:<date_step_environment> .             # added: computational environment
+
+# Workflow Engine
+id:8f4ac682-b0b3-498a-adbd-a5598e303114 a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 3.1.20220607081835"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2022-06-23T14:19:13.747876"^^xsd:dateTime ;
+            prov:hadActivity id:7406d0d8-cba2-4421-a9cc-d0228c50b625 ] .
+
+id:<date_step_environment> a ?:environment ;
+    cwlprov:SoftwareResources id:<date_step_tool> , # all the installed software, not necessarily dependencies
+                           id:<dependency1> ,
+                           id:<dependency2> ,  
+                           ....             ;
+    cwlprov:hadOperatingSystem ?? ; # can be listed under SoftwareResources ?
+    cwlprov:HardwareResources ?? ; # all the AVAILABLE resources, not necessarily all used
+    prov:wasAssociatedWith id:<docker_image> . # only if running in software container
+
+# SoftwareAgent
+id:<date_step_tool> a schema1:SoftwareApplication ;
+    schema1:identifier https://bio.tools/hh-suite ; 
+    schema1:version 3.0 . # this should be gathered from the computational environment or the software container?
+
+id:<dependency1> a schema1:SoftwareApplication ;
+    schema1:identifier ?? ; # not sure if we can gather this automatically
+    schema1:name <name> ; #the name of the tool, can be taken from raw output 
+    schema1:version <version> . # can also be taken from raw environment output
+
+id:<dependency2> a schema1:SoftwareApplication,
+            cwlprov?:OperatingSystem ; ... # etc
+
+# How to store the annotations for CWL Workflow:
+wf:main a wfdesc:Workflow,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string ;
+    wfdesc:hasSubProcess <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/date2_step>,
+        <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/date_step>,
+        <arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/echo_step>, # this already existed
+    schema1:author id:<workflow_author> . # this was added from CWL CLT document annotations
+
+id:<workflow_author> a prov:Entity ; # ideally also a Person & Agent
+    schema1:identifier https://orcid.org/0000-0002-8570-7640 . 
+
+# How to store the annotations for CWL CommandLineTool:
+<arcp://uuid,55f126cb-5fa9-46be-afd4-4e11b76bdab4/workflow/packed.cwl#main/date_step> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan # This already existed
+    schema1:author id:<clt_author> .
+
+id:<clt_author> a prov:Entity ; # ideally also a Person & Agent
+    schema1:identifier https://orcid.org/0000-0002-8570-7640 .
+
+id:<docker_image> a ?? ;
+    cwlprov:image image:tag ;
+    cwlprov:digest sha256:<digest> ;
+    cwlprov:DockerFile <Dockerfile as string? identifier of Dockerfile?> ; # if Dockerfile was used
+    cwlprov:Labels org.identifiers.biotools https://bio.tools/toolID , ?? # maybe a separate id:... entity is better
+                   org.opencontainers.version <version> ;
+    schema1:author <author taken from LABELS> ;
+    schema1:license <...> ;
+    schema1:.. ?? # Whatever we also want to know about this image
+
+
+    
