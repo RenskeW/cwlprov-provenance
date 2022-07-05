@@ -8,6 +8,14 @@
         "https://schema.org/includedInDataCatalog": {
             "https://schema.org/identifier": "https://bio.tools/sabdab"
         },
+        "https://schema.org/hasPart": [
+            {
+                "https://schema.org/name": "part1"
+            },
+            {
+                "https://schema.org/name": "part2"
+            }
+        ],
         "size": 4598025,
         "basename": "sabdab_summary_all_20220527.tsv",
         "nameroot": "sabdab_summary_all_20220527",
@@ -77,9 +85,58 @@
         "nameext": ".csv"
     },
     "$namespaces": {
-        "s": "https://schema.org/"
+        "s": "https://schema.org/",
+        "cwlprov": "https://w3id.org/cwl/prov#"
     },
     "$schemas": [
         "https://schema.org/version/latest/schemaorg-current-https.rdf"
-    ]
+    ],
+    "https://w3id.org/cwl/prov#prov": {
+        "pdb_search": {
+            "https://schema.org/additionalType": "https://schema.org/SearchAction",
+            "https://schema.org/query": "All structures",
+            "https://schema.org/object": {
+                "https://schema.org/identifier": "https://bio.tools/pdb"
+            },
+            "https://schema.org/date": "2022-05-27",
+            "https://schema.org/result": "pdb_download"
+        },
+        "pdb_filtering": {
+            "https://schema.org/additionalType": "https://schema.org/Action",
+            "https://schema.org/object": "pdb_download",
+            "https://schema.org/instrument": {
+                "https://schema.org/identifier": "https://bio.tools/pisces"
+            },
+            "https://schema.org/description": "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset",
+            "https://schema.org/result": "pdb_array"
+        },
+        "merge_action": {
+            "https://schema.org/additionalType": "https://schema.org/Action",
+            "https://schema.org/object": [
+                {
+                    "dataset1": {
+                        "https://schema.org/identifier": "https://doi.org/zenodo.234231"
+                    }
+                },
+                {
+                    "dataset2": {
+                        "https://schema.org/identifier": "https://doi.org/zenodo.343512"
+                    }
+                }
+            ],
+            "https://schema.org/result": "merged_dataset",
+            "https://schema.org/description": "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets",
+            "https://schema.org/instrument": "pandas.DataFrame.join(dataset1, dataset2, how='inner')"
+        },
+        "sabdab_search": {
+            "https://schema.org/additionalType": "https://schema.org/SearchAction",
+            "https://schema.org/object": "https://bio.tools/sabdab",
+            "https://schema.org/query": "All structures",
+            "https://schema.org/result": "sabdab_raw"
+        },
+        "sabdab_processing": {
+            "https://schema.org/additionalType": "https://schema.org/Action",
+            "https://schema.org/description": "Processing of raw file downloaded from SabDab"
+        }
+    }
 }

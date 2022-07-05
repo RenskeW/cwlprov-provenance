@@ -1,40 +1,40 @@
-# cwlprov:prov:
-#   pdb_search:
-#     s:SearchAction: # initial download from the PDB
-#       s:query: "All structures"
-#       s:object: 
-#         s:identifier: https://bio.tools/pdb
-#       s:date: 2022-05-27 # Query date
-#       s:result: pdb_download
+cwlprov:prov:
+  pdb_search:
+    s:additionalType: https://schema.org/SearchAction # initial download from the PDB
+    s:query: "All structures"
+    s:object: 
+      s:identifier: https://bio.tools/pdb
+    s:date: 2022-05-27 # Query date
+    s:result: pdb_download
 
-#   pdb_filtering: # filtering of the initial download
-#     s:Action:
-#       s:object: pdb_download
-#       s:instrument: 
-#         s:identifier: https://bio.tools/pisces # PISCES, a sequence similarity tool
-#       s:about: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
-#       s:result: pdb_array
+  pdb_filtering: # filtering of the initial download
+    s:additionalType: https://schema.org/Action
+    s:object: pdb_download
+    s:instrument: 
+      s:identifier: https://bio.tools/pisces # PISCES, a sequence similarity tool
+    s:about: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
+    s:result: pdb_array
   
-#   merge_action:
-#     s:Action:
-#       s:object:
-#       - dataset1:
-#           s:identifier: https://doi.org/zenodo.234231
-#       - dataset2:
-#           s:identifier: https://doi.org/zenodo.343512
-#       s:result: merged_dataset
-#       s:about: "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets"
-#       s:instrument: "pandas.DataFrame.join(dataset1, dataset2, how='inner')" # function/tool?
+  # merge_action:
+  #   s:additionalType: https://schema.org/Action
+  #   s:object:
+  #   - dataset1:
+  #       s:identifier: https://doi.org/zenodo.234231
+  #   - dataset2:
+  #       s:identifier: https://doi.org/zenodo.343512
+  #   s:result: merged_dataset
+  #   s:about: "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets"
+  #   s:instrument: "pandas.DataFrame.join(dataset1, dataset2, how='inner')" # function/tool?
   
-#   sabdab_search:
-#     s:SearchAction:
-#       s:object: https://bio.tools/sabdab # SAbDab
-#       s:query: "All structures"
-#       s:result: sabdab_raw
+  sabdab_search:
+    s:additionalType: https://schema.org/SearchAction
+    s:object: https://bio.tools/sabdab # SAbDab
+    s:query: "All structures"
+    s:result: sabdab_raw
   
-#   sabdab_processing:
-#     s:Action:
-#       s:about: "Processing of "
+  sabdab_processing:
+    s:additionalType: https://schema.org/Action
+    s:about: "Processing of raw file downloaded from SabDab"
     
 sabdab_file:
   class: File
@@ -44,6 +44,9 @@ sabdab_file:
   s:dateCreated: 2022-05-27 # download date
   s:includedInDataCatalog: 
     s:identifier: https://bio.tools/sabdab # SAbDab
+  s:hasPart:
+  - s:name: "part1"
+  - s:name: "part2"
 
 pdb_dir:
   class: Directory
@@ -84,6 +87,7 @@ merged_dataset:
 
 $namespaces:
   s: https://schema.org/
+  cwlprov: https://w3id.org/cwl/prov#
 
 $schemas:
 - https://schema.org/version/latest/schemaorg-current-https.rdf

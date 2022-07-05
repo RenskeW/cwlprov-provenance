@@ -1,4 +1,4 @@
-cwlprov:prov:
+cwlprov:prov: # this is the key via which cwltool recognizes metadata
   pdb_search:
     s:additionalType: https://schema.org/SearchAction # initial download from the PDB
     s:query: "All structures"
@@ -12,10 +12,10 @@ cwlprov:prov:
     s:object: pdb_download
     s:instrument: 
       s:identifier: https://bio.tools/pisces # PISCES, a sequence similarity tool
-    s:about: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
+    s:description: "Excluding sequences with more than 30% sequence similarity from the initially downloaded dataset"
     s:result: pdb_array
   
-  merge_action:
+  merge_action: # A way to express that 2 entities were combined prior to workflow execution
     s:additionalType: https://schema.org/Action
     s:object:
     - dataset1:
@@ -23,7 +23,7 @@ cwlprov:prov:
     - dataset2:
         s:identifier: https://doi.org/zenodo.343512
     s:result: merged_dataset
-    s:about: "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets"
+    s:description: "Perform inner merge of 2 datasets such that resulting dataset only contains entries found in both datasets"
     s:instrument: "pandas.DataFrame.join(dataset1, dataset2, how='inner')" # function/tool?
   
   sabdab_search:
@@ -34,9 +34,9 @@ cwlprov:prov:
   
   sabdab_processing:
     s:additionalType: https://schema.org/Action
-    s:about: "Processing of raw file downloaded from SabDab"
+    s:description: "Processing of raw file downloaded from SabDab"
     
-sabdab_file:
+sabdab_file: # the first data entity
   class: File
   location: ./data/sabdab_summary_all_20220527.tsv
   format: https://www.iana.org/assignments/media-types/text/tab-separated-values
@@ -55,7 +55,7 @@ pdb_dir:
   s:dateCreated: 2022-06-22 # download date
   s:includedInDataCatalog:
     s:identifier: https://bio.tools/pdb
-  s:hasPart: # This part is not propagated 
+  s:hasPart: # This part is not propagated. We could map annotations to the file entities via basename?
   - s:identifier: http://doi.org/10.2210/pdb1KIP/pdb
     s:version: 1.2
     s:encodingFormat: http://edamontology.org/format_1477 # mmCIF
@@ -75,7 +75,7 @@ pdb_array:
   - class: File
     location: ./data/7zxf.cif
     format: http://edamontology.org/format_1477 # mmCIF
-    s:isPartOf: # here s:includedInDataCatalog is not appropriate because entity is not a Dataset
+    s:isPartOf: # This is redundant when pdb_filtering is already defined. I included it here to show that s:includedInDataCatalog is not appropriate here because entity is not a Dataset.
       s:identifier: https://bio.tools/pdb
     s:identifier: http://doi.org/10.2210/pdb7ZXF/pdb
     s:version: 1.0
