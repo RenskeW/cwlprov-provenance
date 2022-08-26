@@ -1,0 +1,12 @@
+PREFIX s: <http://schema.org/>
+PREFIX wfdesc: <http://purl.org/wf4ever/wfdesc#> 
+
+SELECT ?step_id ?doc ?label ?clt
+
+WHERE {
+    ?wf a wfdesc:Workflow .
+    ?wf wfdesc:hasSubProcess ?step_id .
+    OPTIONAL { ?step_id s:description ?doc . } .
+    OPTIONAL { ?step_id s:name ?label . } .
+    OPTIONAL { ?step_id wfdesc:hasSubProcess ?clt . } .
+}

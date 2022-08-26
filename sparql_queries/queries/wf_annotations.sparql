@@ -1,0 +1,10 @@
+PREFIX s: <http://schema.org/>
+PREFIX wfdesc: <http://purl.org/wf4ever/wfdesc#> 
+
+SELECT ?id ?doc ?intent
+
+WHERE {
+    ?id a wfdesc:Workflow .
+    ?id s:description ?doc .
+    ?id s:featureList ?intent .
+}

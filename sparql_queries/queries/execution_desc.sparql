@@ -1,0 +1,9 @@
+PREFIX s: <http://schema.org/>
+PREFIX wfprov: <http://purl.org/wf4ever/wfprov#> 
+
+SELECT ?desc
+
+WHERE {
+    ?id a wfprov:WorkflowRun .
+    ?id s:description ?desc .
+}

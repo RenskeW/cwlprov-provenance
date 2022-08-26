@@ -1,0 +1,11 @@
+PREFIX s: <http://schema.org/>
+PREFIX cwlprov: <https://w3id.org/cwl/prov#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX wfdesc: <http://purl.org/wf4ever/wfdesc#> 
+
+SELECT DISTINCT ?step_input
+
+WHERE {
+    ?wf wfdesc:hasSubProcess <arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/combine_labels> .
+    OPTIONAL { <arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/combine_labels> wfdesc:hasInput ?step_input } .
+}

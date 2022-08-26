@@ -1,0 +1,17 @@
+	clt	doc	label	step_id
+0	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#combine_features.cwl	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/combine_features
+1	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#combine_labels.cwl	Combine labels into 1 file per protein sequence.	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/combine_labels
+2	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#decompress.cwl	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/decompress_pdb_files
+3	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#pdb_batch_download.cwl	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/download_pdb_files
+4	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#dssp.cwl	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_dssp_labels
+5	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#epitope_annotations.cwl	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_epitope_labels
+6	nan	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_hhm
+7	nan	nan	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_pc7
+8	nan	Extract ppi annotations from BioDL. This step is partly emulated.	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_ppi_labels
+9	nan	nan	Calculate PSP19 features for each residue in each protein sequence.	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/generate_psp19
+10	nan	Extract antigen chains from SAbDab summary file.	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/preprocess_sabdab_data
+11	nan	"""Use PDB search API to run a query on the Protein Data Bank. Returns .txt file with comma-separated PDB IDs which satisfy the query requirements.
+See https://search.rcsb.org/index.html#search-api for a tutorial.""
+"	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/run_pdb_query
+12	nan	"""Predict epitope residues using a multi-task learning approach. This step is not real yet.""  
+"	nan	arcp://uuid,eb41f41c-d7b4-4999-9ce9-719fdc8c12b1/workflow/packed.cwl#main/train_epitope_prediction_model

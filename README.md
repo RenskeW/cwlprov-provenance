@@ -27,3 +27,6 @@ Answer to the question: Are input parameter values included in CWLProv provenanc
 
 ## software_citation
 Are SoftwareRequirement and DockerRequirement included in CWLProv provenance?
+
+## sparql_queries
+Emulated extended provenance graph (`niaa_wf_run/primary.cwlprov.ttl`) and associated SPARQL queries (`sparql_queries.ipynb`) which can extract the newly added information from the RDF graph.
