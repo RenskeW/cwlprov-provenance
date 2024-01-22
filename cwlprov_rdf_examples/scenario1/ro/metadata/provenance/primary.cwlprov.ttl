@@ -32,7 +32,12 @@ wf:main a wfdesc:Workflow,
         prov:Entity,
         prov:Plan ;
     rdfs:label "Prospective provenance"^^xsd:string ;
-    wfdesc:hasSubProcess <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step> .
+    schema:description "WF_doc" ;
+    schema:name "WF_label" ;
+    schema:featureList "http://edamontology.org/operation_0004" ;
+    wfdesc:hasSubProcess <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step> ;
+    wfdesc:hasOutput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_output_file> ;
+    wfdesc:hasInput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_input_file> .
 
 orcid:0000-0003-0902-0086 a schema:Person,
         prov:Agent,
@@ -82,7 +87,47 @@ id:dabf7ba3-5771-4cd9-8498-b38c3a759852 a prov:Agent ;
 
 <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step> a wfdesc:Process,
         prov:Entity,
-        prov:Plan .
+        prov:Plan ;
+        schema:name "wf_step_label" ;
+        schema:description "wf_step_doc" ;
+        wfdesc:hasSubProcess <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl> ;
+        wfdesc:hasInput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_input_file> ;
+        wfdesc:hasOutput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_output_file> .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl> a prov:Entity,
+        prov:Plan ;
+        schema:name "CLT_label" ;
+        schema:description "CLT_doc" ;
+        schema:featureList "http://edamontology.org/operation_0004" ;
+        wfdesc:hasOutput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl/clt_output_file> ;
+        wfdesc:hasInput <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl/clt_input_file> .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl/clt_input_file> a prov:Entity ;
+        schema:name "CLT_input_param_label" ;
+        schema:description "CLT_input_param_doc" ;
+        schema:encodingFormat "https://www.iana.org/assignments/media-types/text/tab-separated-values" .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#echo_file_path.cwl/clt_output_file> a prov:Entity ;
+        schema:name "CLT_output_param_label" ;
+        schema:description "CLT_output_param_doc" ;
+        schema:encodingFormat "https://www.iana.org/assignments/media-types/text/markdown" .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_input_file> a prov:Entity ;
+        schema:name "wf_input_param_label" ;
+        schema:description "wf_input_param_doc" ;
+        schema:encodingFormat "https://www.iana.org/assignments/media-types/text/tab-separated-values" .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_output_file> a prov:Entity ;
+        schema:name "wf_output_param_label" ;
+        schema:description "wf_output_param_doc" ;
+        schema:encodingFormat "https://www.iana.org/assignments/media-types/text/markdown" .        
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_input_file> a prov:Entity ;
+        schema:name "step_input_param_label" ;
+        wfdesc:hasSource <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_output_file> .
+
+<arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_output_file> a prov:Entity ;
+        wfdesc:hasSink <arcp://uuid,d589fe1c-9550-46b1-b2ed-260a515e7410/workflow/packed.cwl#main/wf_step/clt_input_file> .
 
 data:b62e67b129bce94fb033a84f248a3e77c479e216 a wfprov:Artifact,
         prov:Entity .
@@ -112,4 +157,3 @@ id:2141b5c0-918b-41b7-a306-151167ff3c89 a wfprov:WorkflowEngine,
     prov:qualifiedStart [ a prov:Start ;
             prov:atTime "2023-01-02T16:33:42.985384"^^xsd:dateTime ;
             prov:hadActivity id:dabf7ba3-5771-4cd9-8498-b38c3a759852 ] .
-
