@@ -6,5 +6,6 @@
 
 - Same workflow as https://github.com/RenskeW/runcrate-analysis/tree/main/scenario1
 - CWLProv RO stored in `./scenario1/ro`
-    - `ro/metadata/provenance`: old RDF
-    - `ro/metadata/provenance_new`: example of RDF with extended design, including annotations from CWL metadata fields
+    - `ro/metadata/provenance/primary.cwlprov.ttl`: hand-annotated RDF including extended design as visualized here:
+
+![CWLProv extended design](./scenario1/cwlprov_rdf_extended_design.png)
