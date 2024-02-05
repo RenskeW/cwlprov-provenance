@@ -1,0 +1,15 @@
+# Extract doc field of main workflow
+
+#PREFIX wf: <arcp://uuid,a914217a-5cd2-457d-85cc-7472eeb17bfd/workflow/packed.cwl#>
+#PREFIX wfdesc: wfdesc: <http://purl.org/wf4ever/wfdesc#> 
+#PREFIX schema: <http://schema.org/>
+
+SELECT ?wf ?doc ?label ?intent
+
+WHERE {
+    ?wf a wfdesc:Workflow .
+    OPTIONAL {?wf schema:description ?doc}
+    OPTIONAL {?wf schema:name ?label}
+    OPTIONAL {?wf schema:featureList ?intent}
+}
+

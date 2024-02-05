@@ -1,0 +1,22 @@
+# Extract doc field of main workflow
+
+SELECT DISTINCT ?main_wf ?clt ?param_doc ?param_label ?param_format
+
+WHERE {
+    ?main_wf a wfdesc:Workflow .
+    ?main_wf wfdesc:hasSubProcess ?main_wf_step .
+    ?main_wf_step wfdesc:hasSubProcess ?clt .
+    OPTIONAL {
+        ?clt wfdesc:hasInput ?clt_input .
+        OPTIONAL {
+            ?clt_param schema:description ?param_doc .
+        }
+        OPTIONAL {
+            ?clt_param schema:name ?param_label .
+        }
+        OPTIONAL {
+            ?clt_param schema:encodingFormat ?param_format .
+        }
+    }
+}
+

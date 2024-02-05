@@ -1,0 +1,20 @@
+# Extract doc field of main workflow
+
+SELECT ?wf ?doc ?label ?format
+
+WHERE {
+    ?wf a wfdesc:Workflow .
+    OPTIONAL {
+        ?wf wfdesc:hasOutput ?wf_input .
+        OPTIONAL {
+            ?wf_input schema:description ?doc .
+        }
+        OPTIONAL {
+            ?wf_input schema:name ?label .
+        }
+        OPTIONAL {
+            ?wf_input schema:encodingFormat ?format .
+        }
+    }
+}
+
